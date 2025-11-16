@@ -1,0 +1,114 @@
+.plantSunflower {
+  background-image: url("../Images/plants/plantSunflower/01.png");
+  animation: sunflowerIdle 2.5s infinite;
+}
+
+@keyframes sunflowerIdle {
+  0% {
+    background-image: url("../Images/plants/plantSunflower/01.png");
+  }
+
+  5% {
+    background-image: url("../Images/plants/plantSunflower/02.png");
+  }
+
+  9% {
+    background-image: url("../Images/plants/plantSunflower/03.png");
+  }
+
+  13% {
+    background-image: url("../Images/plants/plantSunflower/04.png");
+  }
+
+  16% {
+    background-image: url("../Images/plants/plantSunflower/05.png");
+  }
+
+  20% {
+    background-image: url("../Images/plants/plantSunflower/06.png");
+  }
+
+  24% {
+    background-image: url("../Images/plants/plantSunflower/07.png");
+  }
+
+  28% {
+    background-image: url("../Images/plants/plantSunflower/08.png");
+  }
+
+  32% {
+    background-image: url("../Images/plants/plantSunflower/09.png");
+  }
+
+  36% {
+    background-image: url("../Images/plants/plantSunflower/10.png");
+  }
+
+  39% {
+    background-image: url("../Images/plants/plantSunflower/11.png");
+  }
+
+  43% {
+    background-image: url("../Images/plants/plantSunflower/12.png");
+  }
+
+  47% {
+    background-image: url("../Images/plants/plantSunflower/13.png");
+  }
+
+  51% {
+    background-image: url("../Images/plants/plantSunflower/14.png");
+  }
+
+  55% {
+    background-image: url("../Images/plants/plantSunflower/15.png");
+  }
+
+  59% {
+    background-image: url("../Images/plants/plantSunflower/16.png");
+  }
+
+  62% {
+    background-image: url("../Images/plants/plantSunflower/17.png");
+  }
+
+  66% {
+    background-image: url("../Images/plants/plantSunflower/18.png");
+  }
+
+  70% {
+    background-image: url("../Images/plants/plantSunflower/19.png");
+  }
+
+  74% {
+    background-image: url("../Images/plants/plantSunflower/20.png");
+  }
+
+  77% {
+    background-image: url("../Images/plants/plantSunflower/21.png");
+  }
+
+  81% {
+    background-image: url("../Images/plants/plantSunflower/22.png");
+  }
+
+  85% {
+    background-image: url("../Images/plants/plantSunflower/23.png");
+  }
+
+  89% {
+    background-image: url("../Images/plants/plantSunflower/24.png");
+  }
+
+  92% {
+    background-image: url("../Images/plants/plantSunflower/25.png");
+  }
+
+  96% {
+    background-image: url("../Images/plants/plantSunflower/26.png");
+  }
+
+  100% {
+    background-image: url("../Images/plants/plantSunflower/27.png");
+  }
+}

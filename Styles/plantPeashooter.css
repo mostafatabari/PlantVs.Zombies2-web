@@ -1,0 +1,50 @@
+.plantPeashooter {
+  background-image: url("../Images/plants/plantPeashooter/01.png");
+  animation: peashooterIdle 2s infinite;
+}
+
+@keyframes peashooterIdle {
+  0% {
+    background-image: url("../Images/plants/plantPeashooter/01.png");
+  }
+
+  10% {
+    background-image: url("../Images/plants/plantPeashooter/02.png");
+  }
+
+  20% {
+    background-image: url("../Images/plants/plantPeashooter/03.png");
+  }
+
+  30% {
+    background-image: url("../Images/plants/plantPeashooter/04.png");
+  }
+
+  40% {
+    background-image: url("../Images/plants/plantPeashooter/05.png");
+  }
+
+  50% {
+    background-image: url("../Images/plants/plantPeashooter/06.png");
+  }
+
+  60% {
+    background-image: url("../Images/plants/plantPeashooter/07.png");
+  }
+
+  70% {
+    background-image: url("../Images/plants/plantPeashooter/08.png");
+  }
+
+  80% {
+    background-image: url("../Images/plants/plantPeashooter/09.png");
+  }
+
+  90% {
+    background-image: url("../Images/plants/plantPeashooter/10.png");
+  }
+
+  100% {
+    background-image: url("../Images/plants/plantPeashooter/11.png");
+  }
+}

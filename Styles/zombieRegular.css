@@ -1,0 +1,541 @@
+.zombieRegular {
+  background-image: url("../Images/zombies/zombieRegular/01.png");
+  animation: regularAnimate 2s infinite,
+    regularStepForward 1 60s linear forwards;
+}
+
+@keyframes regularStepForward {
+  /* Step 0 */
+  0% {
+    left: 108%;
+  }
+  1.19% {
+    left: 108%;
+  }
+  2.25% {
+    left: 106.65%;
+  }
+  3.33% {
+    left: 106.65%;
+  }
+
+  /* Step 1 */
+  3.33% {
+    left: 106.65%;
+  }
+  4.52% {
+    left: 106.65%;
+  }
+  5.58% {
+    left: 103.3%;
+  }
+  6.67% {
+    left: 103.3%;
+  }
+
+  /* Step 2 */
+  6.67% {
+    left: 103.3%;
+  }
+  7.86% {
+    left: 103.3%;
+  }
+  8.92% {
+    left: 99.95%;
+  }
+  10% {
+    left: 99.95%;
+  }
+
+  /* Step 3 */
+  10% {
+    left: 99.95%;
+  }
+  11.19% {
+    left: 99.95%;
+  }
+  12.25% {
+    left: 96.6%;
+  }
+  13.33% {
+    left: 96.6%;
+  }
+
+  /* Step 4 */
+  13.33% {
+    left: 96.6%;
+  }
+  14.52% {
+    left: 96.6%;
+  }
+  15.58% {
+    left: 93.25%;
+  }
+  16.67% {
+    left: 93.25%;
+  }
+
+  /* Step 5 */
+  16.67% {
+    left: 93.25%;
+  }
+  17.86% {
+    left: 93.25%;
+  }
+  18.92% {
+    left: 89.9%;
+  }
+  20% {
+    left: 89.9%;
+  }
+
+  /* Step 6 */
+  20% {
+    left: 89.9%;
+  }
+  21.19% {
+    left: 89.9%;
+  }
+  22.25% {
+    left: 86.55%;
+  }
+  23.33% {
+    left: 86.55%;
+  }
+
+  /* Step 7 */
+  23.33% {
+    left: 86.55%;
+  }
+  24.52% {
+    left: 86.55%;
+  }
+  25.58% {
+    left: 83.2%;
+  }
+  26.67% {
+    left: 83.2%;
+  }
+
+  /* Step 8 */
+  26.67% {
+    left: 83.2%;
+  }
+  27.86% {
+    left: 83.2%;
+  }
+  28.92% {
+    left: 79.85%;
+  }
+  30% {
+    left: 79.85%;
+  }
+
+  /* Step 9 */
+  30% {
+    left: 79.85%;
+  }
+  31.19% {
+    left: 79.85%;
+  }
+  32.25% {
+    left: 76.5%;
+  }
+  33.33% {
+    left: 76.5%;
+  }
+
+  /* Step 10 */
+  33.33% {
+    left: 76.5%;
+  }
+  34.52% {
+    left: 76.5%;
+  }
+  35.58% {
+    left: 73.15%;
+  }
+  36.67% {
+    left: 73.15%;
+  }
+
+  /* Step 11 */
+  36.67% {
+    left: 73.15%;
+  }
+  37.86% {
+    left: 73.15%;
+  }
+  38.92% {
+    left: 69.8%;
+  }
+  40% {
+    left: 69.8%;
+  }
+
+  /* Step 12 */
+  40% {
+    left: 69.8%;
+  }
+  41.19% {
+    left: 69.8%;
+  }
+  42.25% {
+    left: 66.45%;
+  }
+  43.33% {
+    left: 66.45%;
+  }
+
+  /* Step 13 */
+  43.33% {
+    left: 66.45%;
+  }
+  44.52% {
+    left: 66.45%;
+  }
+  45.58% {
+    left: 63.1%;
+  }
+  46.67% {
+    left: 63.1%;
+  }
+
+  /* Step 14 */
+  46.67% {
+    left: 63.1%;
+  }
+  47.86% {
+    left: 63.1%;
+  }
+  48.92% {
+    left: 59.75%;
+  }
+  50% {
+    left: 59.75%;
+  }
+
+  /* Step 15 */
+  50% {
+    left: 59.75%;
+  }
+  51.19% {
+    left: 59.75%;
+  }
+  52.25% {
+    left: 56.4%;
+  }
+  53.33% {
+    left: 56.4%;
+  }
+
+  /* Step 16 */
+  53.33% {
+    left: 56.4%;
+  }
+  54.52% {
+    left: 56.4%;
+  }
+  55.58% {
+    left: 53.05%;
+  }
+  56.67% {
+    left: 53.05%;
+  }
+
+  /* Step 17 */
+  56.67% {
+    left: 53.05%;
+  }
+  57.86% {
+    left: 53.05%;
+  }
+  58.92% {
+    left: 49.7%;
+  }
+  60% {
+    left: 49.7%;
+  }
+
+  /* Step 18 */
+  60% {
+    left: 49.7%;
+  }
+  61.19% {
+    left: 49.7%;
+  }
+  62.25% {
+    left: 46.35%;
+  }
+  63.33% {
+    left: 46.35%;
+  }
+
+  /* Step 19 */
+  63.33% {
+    left: 46.35%;
+  }
+  64.52% {
+    left: 46.35%;
+  }
+  65.58% {
+    left: 43%;
+  }
+  66.67% {
+    left: 43%;
+  }
+
+  /* Step 20 */
+  66.67% {
+    left: 43%;
+  }
+  67.86% {
+    left: 43%;
+  }
+  68.92% {
+    left: 39.65%;
+  }
+  70% {
+    left: 39.65%;
+  }
+
+  /* Step 21 */
+  70% {
+    left: 39.65%;
+  }
+  71.19% {
+    left: 39.65%;
+  }
+  72.25% {
+    left: 36.3%;
+  }
+  73.33% {
+    left: 36.3%;
+  }
+
+  /* Step 22 */
+  73.33% {
+    left: 36.3%;
+  }
+  74.52% {
+    left: 36.3%;
+  }
+  75.58% {
+    left: 32.95%;
+  }
+  76.67% {
+    left: 32.95%;
+  }
+
+  /* Step 23 */
+  76.67% {
+    left: 32.95%;
+  }
+  77.86% {
+    left: 32.95%;
+  }
+  78.92% {
+    left: 29.6%;
+  }
+  80% {
+    left: 29.6%;
+  }
+
+  /* Step 24 */
+  80% {
+    left: 29.6%;
+  }
+  81.19% {
+    left: 29.6%;
+  }
+  82.25% {
+    left: 26.25%;
+  }
+  83.33% {
+    left: 26.25%;
+  }
+
+  /* Step 25 */
+  83.33% {
+    left: 26.25%;
+  }
+  84.52% {
+    left: 26.25%;
+  }
+  85.58% {
+    left: 22.9%;
+  }
+  86.67% {
+    left: 22.9%;
+  }
+
+  /* Step 26 */
+  86.67% {
+    left: 22.9%;
+  }
+  87.86% {
+    left: 22.9%;
+  }
+  88.92% {
+    left: 19.55%;
+  }
+  90% {
+    left: 19.55%;
+  }
+
+  /* Step 27 */
+  90% {
+    left: 19.55%;
+  }
+  91.19% {
+    left: 19.55%;
+  }
+  92.25% {
+    left: 16.2%;
+  }
+  93.33% {
+    left: 16.2%;
+  }
+
+  /* Step 28 */
+  93.33% {
+    left: 16.2%;
+  }
+  94.52% {
+    left: 16.2%;
+  }
+  95.58% {
+    left: 12.85%;
+  }
+  96.67% {
+    left: 12.85%;
+  }
+
+  /* Step 29 */
+  96.67% {
+    left: 12.85%;
+  }
+  97.86% {
+    left: 12.85%;
+  }
+  98.92% {
+    left: 10%;
+  }
+  100% {
+    left: 10%;
+  }
+}
+
+@keyframes regularAnimate {
+  0% {
+    background-image: url("../Images/zombies/zombieRegular/01.png");
+  }
+
+  4% {
+    background-image: url("../Images/zombies/zombieRegular/02.png");
+  }
+
+  8% {
+    background-image: url("../Images/zombies/zombieRegular/03.png");
+  }
+
+  11% {
+    background-image: url("../Images/zombies/zombieRegular/04.png");
+  }
+
+  15% {
+    background-image: url("../Images/zombies/zombieRegular/05.png");
+  }
+
+  19% {
+    background-image: url("../Images/zombies/zombieRegular/06.png");
+  }
+
+  22% {
+    background-image: url("../Images/zombies/zombieRegular/07.png");
+  }
+
+  26% {
+    background-image: url("../Images/zombies/zombieRegular/08.png");
+  }
+
+  30% {
+    background-image: url("../Images/zombies/zombieRegular/09.png");
+  }
+
+  33% {
+    background-image: url("../Images/zombies/zombieRegular/10.png");
+  }
+
+  37% {
+    background-image: url("../Images/zombies/zombieRegular/11.png");
+  }
+
+  41% {
+    background-image: url("../Images/zombies/zombieRegular/12.png");
+  }
+
+  44% {
+    background-image: url("../Images/zombies/zombieRegular/13.png");
+  }
+
+  48% {
+    background-image: url("../Images/zombies/zombieRegular/14.png");
+  }
+
+  52% {
+    background-image: url("../Images/zombies/zombieRegular/15.png");
+  }
+
+  55% {
+    background-image: url("../Images/zombies/zombieRegular/16.png");
+  }
+
+  59% {
+    background-image: url("../Images/zombies/zombieRegular/17.png");
+  }
+
+  63% {
+    background-image: url("../Images/zombies/zombieRegular/18.png");
+  }
+
+  66% {
+    background-image: url("../Images/zombies/zombieRegular/19.png");
+  }
+
+  70% {
+    background-image: url("../Images/zombies/zombieRegular/20.png");
+  }
+
+  74% {
+    background-image: url("../Images/zombies/zombieRegular/21.png");
+  }
+
+  77% {
+    background-image: url("../Images/zombies/zombieRegular/22.png");
+  }
+
+  81% {
+    background-image: url("../Images/zombies/zombieRegular/23.png");
+  }
+
+  85% {
+    background-image: url("../Images/zombies/zombieRegular/24.png");
+  }
+
+  88% {
+    background-image: url("../Images/zombies/zombieRegular/25.png");
+  }
+
+  92% {
+    background-image: url("../Images/zombies/zombieRegular/26.png");
+  }
+
+  96% {
+    background-image: url("../Images/zombies/zombieRegular/27.png");
+  }
+
+  100% {
+    background-image: url("../Images/zombies/zombieRegular/28.png");
+  }
+}

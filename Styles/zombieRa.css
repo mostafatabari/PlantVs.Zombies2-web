@@ -1,0 +1,460 @@
+.zombieRa {
+  background-image: url("../Images/zombies/zombieRa/01.png");
+  animation: raAnimate 2s infinite, raStepForward 1 36s linear forwards;
+}
+
+@keyframes raStepForward {
+  0% {
+    left: 110%;
+  }
+
+  /* Step 1 */
+  0.0% {
+    left: 110%;
+  }
+  0.8% {
+    left: 110%;
+  }
+  4.3% {
+    left: 104.3%;
+  }
+  5.6% {
+    left: 104.3%;
+  }
+
+  /* Step 2 */
+  5.6% {
+    left: 104.3%;
+  }
+  6.4% {
+    left: 104.3%;
+  }
+  9.9% {
+    left: 98.6%;
+  }
+  11.1% {
+    left: 98.6%;
+  }
+
+  /* Step 3 */
+  11.1% {
+    left: 98.6%;
+  }
+  11.9% {
+    left: 98.6%;
+  }
+  15.4% {
+    left: 92.9%;
+  }
+  16.7% {
+    left: 92.9%;
+  }
+
+  /* Step 4 */
+  16.7% {
+    left: 92.9%;
+  }
+  17.5% {
+    left: 92.9%;
+  }
+  21.0% {
+    left: 87.2%;
+  }
+  22.2% {
+    left: 87.2%;
+  }
+
+  /* Step 5 */
+  22.2% {
+    left: 87.2%;
+  }
+  23.0% {
+    left: 87.2%;
+  }
+  26.5% {
+    left: 81.5%;
+  }
+  27.8% {
+    left: 81.5%;
+  }
+
+  /* Step 6 */
+  27.8% {
+    left: 81.5%;
+  }
+  28.6% {
+    left: 81.5%;
+  }
+  32.1% {
+    left: 75.8%;
+  }
+  33.3% {
+    left: 75.8%;
+  }
+
+  /* Step 7 */
+  33.3% {
+    left: 75.8%;
+  }
+  34.1% {
+    left: 75.8%;
+  }
+  37.6% {
+    left: 70.1%;
+  }
+  38.9% {
+    left: 70.1%;
+  }
+
+  /* Step 8 */
+  38.9% {
+    left: 70.1%;
+  }
+  39.7% {
+    left: 70.1%;
+  }
+  43.2% {
+    left: 64.4%;
+  }
+  44.4% {
+    left: 64.4%;
+  }
+
+  /* Step 9 */
+  44.4% {
+    left: 64.4%;
+  }
+  45.2% {
+    left: 64.4%;
+  }
+  48.7% {
+    left: 58.7%;
+  }
+  50.0% {
+    left: 58.7%;
+  }
+
+  /* Step 10 */
+  50.0% {
+    left: 58.7%;
+  }
+  50.8% {
+    left: 58.7%;
+  }
+  54.3% {
+    left: 53%;
+  }
+  55.6% {
+    left: 53%;
+  }
+
+  /* Step 11 */
+  55.6% {
+    left: 53%;
+  }
+  56.4% {
+    left: 53%;
+  }
+  59.9% {
+    left: 47.3%;
+  }
+  61.1% {
+    left: 47.3%;
+  }
+
+  /* Step 12 */
+  61.1% {
+    left: 47.3%;
+  }
+  61.9% {
+    left: 47.3%;
+  }
+  65.4% {
+    left: 41.6%;
+  }
+  66.7% {
+    left: 41.6%;
+  }
+
+  /* Step 13 */
+  66.7% {
+    left: 41.6%;
+  }
+  67.5% {
+    left: 41.6%;
+  }
+  71.0% {
+    left: 35.9%;
+  }
+  72.2% {
+    left: 35.9%;
+  }
+
+  /* Step 14 */
+  72.2% {
+    left: 35.9%;
+  }
+  73.0% {
+    left: 35.9%;
+  }
+  76.5% {
+    left: 30.2%;
+  }
+  77.8% {
+    left: 30.2%;
+  }
+
+  /* Step 15 */
+  77.8% {
+    left: 30.2%;
+  }
+  78.6% {
+    left: 30.2%;
+  }
+  82.1% {
+    left: 24.5%;
+  }
+  83.3% {
+    left: 24.5%;
+  }
+
+  /* Step 16 */
+  83.3% {
+    left: 24.5%;
+  }
+  84.1% {
+    left: 24.5%;
+  }
+  87.6% {
+    left: 18.8%;
+  }
+  88.9% {
+    left: 18.8%;
+  }
+
+  /* Step 17 */
+  88.9% {
+    left: 18.8%;
+  }
+  89.7% {
+    left: 18.8%;
+  }
+  93.2% {
+    left: 13.1%;
+  }
+  94.4% {
+    left: 13.1%;
+  }
+
+  /* Step 18 */
+  94.4% {
+    left: 13.1%;
+  }
+  95.2% {
+    left: 13.1%;
+  }
+  98.7% {
+    left: 10%;
+  }
+  100% {
+    left: 10%;
+  }
+}
+
+@keyframes raAnimate {
+  0% {
+    background-image: url("../Images/zombies/zombieRa/01.png");
+  }
+
+  2% {
+    background-image: url("../Images/zombies/zombieRa/02.png");
+  }
+
+  4% {
+    background-image: url("../Images/zombies/zombieRa/03.png");
+  }
+
+  6% {
+    background-image: url("../Images/zombies/zombieRa/04.png");
+  }
+
+  8% {
+    background-image: url("../Images/zombies/zombieRa/05.png");
+  }
+
+  10% {
+    background-image: url("../Images/zombies/zombieRa/06.png");
+  }
+
+  12% {
+    background-image: url("../Images/zombies/zombieRa/07.png");
+  }
+
+  14% {
+    background-image: url("../Images/zombies/zombieRa/08.png");
+  }
+
+  16% {
+    background-image: url("../Images/zombies/zombieRa/09.png");
+  }
+
+  18% {
+    background-image: url("../Images/zombies/zombieRa/10.png");
+  }
+
+  20% {
+    background-image: url("../Images/zombies/zombieRa/11.png");
+  }
+
+  23% {
+    background-image: url("../Images/zombies/zombieRa/12.png");
+  }
+
+  25% {
+    background-image: url("../Images/zombies/zombieRa/13.png");
+  }
+
+  27% {
+    background-image: url("../Images/zombies/zombieRa/14.png");
+  }
+
+  29% {
+    background-image: url("../Images/zombies/zombieRa/15.png");
+  }
+
+  31% {
+    background-image: url("../Images/zombies/zombieRa/16.png");
+  }
+
+  33% {
+    background-image: url("../Images/zombies/zombieRa/17.png");
+  }
+
+  35% {
+    background-image: url("../Images/zombies/zombieRa/18.png");
+  }
+
+  37% {
+    background-image: url("../Images/zombies/zombieRa/19.png");
+  }
+
+  39% {
+    background-image: url("../Images/zombies/zombieRa/20.png");
+  }
+
+  41% {
+    background-image: url("../Images/zombies/zombieRa/21.png");
+  }
+
+  43% {
+    background-image: url("../Images/zombies/zombieRa/22.png");
+  }
+
+  45% {
+    background-image: url("../Images/zombies/zombieRa/23.png");
+  }
+
+  48% {
+    background-image: url("../Images/zombies/zombieRa/24.png");
+  }
+
+  50% {
+    background-image: url("../Images/zombies/zombieRa/25.png");
+  }
+
+  52% {
+    background-image: url("../Images/zombies/zombieRa/26.png");
+  }
+
+  54% {
+    background-image: url("../Images/zombies/zombieRa/27.png");
+  }
+
+  56% {
+    background-image: url("../Images/zombies/zombieRa/28.png");
+  }
+
+  58% {
+    background-image: url("../Images/zombies/zombieRa/29.png");
+  }
+
+  60% {
+    background-image: url("../Images/zombies/zombieRa/30.png");
+  }
+
+  62% {
+    background-image: url("../Images/zombies/zombieRa/31.png");
+  }
+
+  64% {
+    background-image: url("../Images/zombies/zombieRa/32.png");
+  }
+
+  66% {
+    background-image: url("../Images/zombies/zombieRa/33.png");
+  }
+
+  68% {
+    background-image: url("../Images/zombies/zombieRa/34.png");
+  }
+
+  71% {
+    background-image: url("../Images/zombies/zombieRa/35.png");
+  }
+
+  73% {
+    background-image: url("../Images/zombies/zombieRa/36.png");
+  }
+
+  75% {
+    background-image: url("../Images/zombies/zombieRa/37.png");
+  }
+
+  77% {
+    background-image: url("../Images/zombies/zombieRa/38.png");
+  }
+
+  79% {
+    background-image: url("../Images/zombies/zombieRa/39.png");
+  }
+
+  81% {
+    background-image: url("../Images/zombies/zombieRa/40.png");
+  }
+
+  83% {
+    background-image: url("../Images/zombies/zombieRa/41.png");
+  }
+
+  85% {
+    background-image: url("../Images/zombies/zombieRa/42.png");
+  }
+
+  87% {
+    background-image: url("../Images/zombies/zombieRa/43.png");
+  }
+
+  89% {
+    background-image: url("../Images/zombies/zombieRa/44.png");
+  }
+
+  91% {
+    background-image: url("../Images/zombies/zombieRa/45.png");
+  }
+
+  93% {
+    background-image: url("../Images/zombies/zombieRa/46.png");
+  }
+
+  95% {
+    background-image: url("../Images/zombies/zombieRa/47.png");
+  }
+
+  97% {
+    background-image: url("../Images/zombies/zombieRa/48.png");
+  }
+
+  100% {
+    background-image: url("../Images/zombies/zombieRa/49.png");
+  }
+}

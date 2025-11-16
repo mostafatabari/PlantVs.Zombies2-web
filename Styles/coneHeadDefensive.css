@@ -1,0 +1,99 @@
+.coneHeadDefensive {
+  background-image: url("../Images/zombies/coneHeadDefensive/01.png");
+  background-size: 110;
+  animation: coneHeadDefensiveLaunch 4s infinite;
+}
+
+@keyframes coneHeadDefensiveLaunch {
+  0% {
+    background-image: url("../Images/zombies/coneHeadDefensive/01.png");
+  }
+
+  4.5% {
+    background-image: url("../Images/zombies/coneHeadDefensive/02.png");
+  }
+
+  9% {
+    background-image: url("../Images/zombies/coneHeadDefensive/03.png");
+  }
+
+  13.5% {
+    background-image: url("../Images/zombies/coneHeadDefensive/04.png");
+  }
+
+  18% {
+    background-image: url("../Images/zombies/coneHeadDefensive/05.png");
+  }
+
+  22.5% {
+    background-image: url("../Images/zombies/coneHeadDefensive/06.png");
+  }
+
+  27% {
+    background-image: url("../Images/zombies/coneHeadDefensive/07.png");
+  }
+
+  32% {
+    background-image: url("../Images/zombies/coneHeadDefensive/08.png");
+  }
+
+  36.5% {
+    background-image: url("../Images/zombies/coneHeadDefensive/09.png");
+  }
+
+  41% {
+    background-image: url("../Images/zombies/coneHeadDefensive/10.png");
+  }
+
+  45.5% {
+    background-image: url("../Images/zombies/coneHeadDefensive/11.png");
+  }
+
+  50% {
+    background-image: url("../Images/zombies/coneHeadDefensive/12.png");
+  }
+
+  54.5% {
+    background-image: url("../Images/zombies/coneHeadDefensive/13.png");
+  }
+
+  59% {
+    background-image: url("../Images/zombies/coneHeadDefensive/14.png");
+  }
+
+  63.5% {
+    background-image: url("../Images/zombies/coneHeadDefensive/15.png");
+  }
+
+  68.5% {
+    background-image: url("../Images/zombies/coneHeadDefensive/16.png");
+  }
+
+  73% {
+    background-image: url("../Images/zombies/coneHeadDefensive/17.png");
+  }
+
+  77.5% {
+    background-image: url("../Images/zombies/coneHeadDefensive/18.png");
+  }
+
+  82% {
+    background-image: url("../Images/zombies/coneHeadDefensive/19.png");
+  }
+
+  86.5% {
+    background-image: url("../Images/zombies/coneHeadDefensive/20.png");
+  }
+
+  91% {
+    background-image: url("../Images/zombies/coneHeadDefensive/21.png");
+  }
+
+  95.5% {
+    background-image: url("../Images/zombies/coneHeadDefensive/22.png");
+  }
+
+  100% {
+    background-image: url("../Images/zombies/coneHeadDefensive/23.png");
+  }
+}

@@ -1,0 +1,59 @@
+.regularIdle {
+  transition: 1s ease-in-out;
+  background-image: url("../Images/zombies/regularIdle/01.png");
+  animation: regularIdleAnimate 1s infinite alternate;
+}
+
+@keyframes regularIdleAnimate {
+  0% {
+    background-image: url("../Images/zombies/regularIdle/01.png");
+  }
+
+  8% {
+    background-image: url("../Images/zombies/regularIdle/02.png");
+  }
+
+  17% {
+    background-image: url("../Images/zombies/regularIdle/03.png");
+  }
+
+  25% {
+    background-image: url("../Images/zombies/regularIdle/04.png");
+  }
+
+  33% {
+    background-image: url("../Images/zombies/regularIdle/05.png");
+  }
+
+  42% {
+    background-image: url("../Images/zombies/regularIdle/06.png");
+  }
+
+  50% {
+    background-image: url("../Images/zombies/regularIdle/07.png");
+  }
+
+  58% {
+    background-image: url("../Images/zombies/regularIdle/08.png");
+  }
+
+  67% {
+    background-image: url("../Images/zombies/regularIdle/09.png");
+  }
+
+  75% {
+    background-image: url("../Images/zombies/regularIdle/10.png");
+  }
+
+  83% {
+    background-image: url("../Images/zombies/regularIdle/11.png");
+  }
+
+  91% {
+    background-image: url("../Images/zombies/regularIdle/12.png");
+  }
+
+  100% {
+    background-image: url("../Images/zombies/regularIdle/13.png");
+  }
+}

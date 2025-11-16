@@ -1,0 +1,144 @@
+#plantGrid {
+    width: 56.8%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    pointer-events: none;
+    position: absolute;
+    top: 24%;
+    left: 33.4%;
+}
+
+.gridCell {
+    aspect-ratio: 1/1.2;
+    pointer-events: auto;
+    position: relative;
+    border: 1p solid #fff;
+}
+
+.plants {
+    width: 115%;
+    height: 115%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    background: no-repeat center;
+    background-size: contain;
+    z-index: 60;
+}
+
+.plants::after {
+    content: "";
+    width: 75%;
+    height: 30%;
+    border-radius: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 50%, transparent 70%);
+}
+
+.bullet {
+    transition: 8s ease-in;
+    width: 30%;
+    height: auto;
+    aspect-ratio: 1;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 25%;
+    left: 90%;
+    background: url(../Images/plants/PeaBullet/frame_24_delay-0.08s.png) no-repeat center;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 50;
+    animation: bulletMove 5s linear forwards;
+}
+
+@keyframes bulletMove {
+       100%{ left: 2000%;}
+}
+.bullet::after {
+    content: "";
+    width: 100%;
+    height: 50%;
+    border-radius: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    bottom: -150%;
+    left: 50%;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 50%, transparent 70%);
+}
+
+/* grid cell in selected state */
+
+.gridCell.gridCellSelected::before,
+.gridCell.gridCellSelected::after {
+    content: "";
+    width: 65%;
+    height: auto;
+    aspect-ratio: 1;
+    border: 0.5rem solid rgba(172, 255, 47, 0.7);
+    border-radius: 20%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    mask: linear-gradient(black, black) 0% 0% /35% 35% no-repeat,
+        linear-gradient(black, black) 100% 0% /35% 35% no-repeat,
+        linear-gradient(black, black) 100% 100% /35% 35% no-repeat,
+        linear-gradient(black, black) 0% 100% /35% 35% no-repeat;
+    animation: cellSelectedScaleUp 1s infinite;
+}
+
+@keyframes cellSelectedScaleUp {
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.gridCell.gridCellSelected::after {
+    animation: cellSelectedScaleDown 1s infinite;
+}
+
+@keyframes cellSelectedScaleDown {
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+.gridCell.gridCellSelectedAfter::before,
+.gridCell.gridCellSelectedAfter::after {
+    content: "";
+    border: 0.5rem solid rgba(170, 0, 0, 0.7);
+}
+
+.zombies {
+    width: 20%;
+    height: 30%;
+    transform: translateX(-50%);
+    position: absolute;
+    left:80%;
+    background: no-repeat center;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 40;
+}
+
+.zombies::after {
+    content: "";
+    width: 50%;
+    height: 20%;
+    border-radius: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 50%, transparent 70%);
+}

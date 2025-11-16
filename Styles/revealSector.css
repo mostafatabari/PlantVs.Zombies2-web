@@ -1,0 +1,252 @@
+#panelPlantDeckClone > .slotSelectedPlant {
+  opacity: 0.5;
+  mask: conic-gradient(transparent 0deg 0deg, black 0deg, black 360deg)
+    center/cover no-repeat;
+  animation: revealSector 5s linear forwards;
+}
+
+@keyframes revealSector {
+  0% {
+    mask: conic-gradient(transparent 0deg 0deg, black 0deg 360deg);
+  }
+
+  1.6% {
+    mask: conic-gradient(transparent 0deg 6deg, black 6deg 360deg);
+  }
+
+  3.3% {
+    mask: conic-gradient(transparent 0deg 12deg, black 12deg 360deg);
+  }
+
+  5% {
+    mask: conic-gradient(transparent 0deg 18deg, black 18deg 360deg);
+  }
+
+  6.6% {
+    mask: conic-gradient(transparent 0deg 24deg, black 24deg 360deg);
+  }
+
+  8.3% {
+    mask: conic-gradient(transparent 0deg 30deg, black 30deg 360deg);
+  }
+
+  10% {
+    mask: conic-gradient(transparent 0deg 36deg, black 36deg 360deg);
+  }
+
+  11.6% {
+    mask: conic-gradient(transparent 0deg 42deg, black 42deg 360deg);
+  }
+
+  13.3% {
+    mask: conic-gradient(transparent 0deg 48deg, black 48deg 360deg);
+  }
+
+  15% {
+    mask: conic-gradient(transparent 0deg 54deg, black 54deg 360deg);
+  }
+
+  16.6% {
+    mask: conic-gradient(transparent 0deg 60deg, black 60deg 360deg);
+  }
+
+  18.3% {
+    mask: conic-gradient(transparent 0deg 66deg, black 66deg 360deg);
+  }
+
+  20% {
+    mask: conic-gradient(transparent 0deg 72deg, black 72deg 360deg);
+  }
+
+  21.6% {
+    mask: conic-gradient(transparent 0deg 78deg, black 78deg 360deg);
+  }
+
+  23.3% {
+    mask: conic-gradient(transparent 0deg 84deg, black 84deg 360deg);
+  }
+
+  25% {
+    mask: conic-gradient(transparent 0deg 90deg, black 90deg 360deg);
+  }
+
+  26.6% {
+    mask: conic-gradient(transparent 0deg 96deg, black 96deg 360deg);
+  }
+
+  28.3% {
+    mask: conic-gradient(transparent 0deg 102deg, black 102deg 360deg);
+  }
+
+  30% {
+    mask: conic-gradient(transparent 0deg 108deg, black 108deg 360deg);
+  }
+
+  31.6% {
+    mask: conic-gradient(transparent 0deg 114deg, black 114deg 360deg);
+  }
+
+  33.3% {
+    mask: conic-gradient(transparent 0deg 120deg, black 120deg 360deg);
+  }
+
+  35% {
+    mask: conic-gradient(transparent 0deg 126deg, black 126deg 360deg);
+  }
+
+  36.6% {
+    mask: conic-gradient(transparent 0deg 132deg, black 132deg 360deg);
+  }
+
+  38.3% {
+    mask: conic-gradient(transparent 0deg 138deg, black 138deg 360deg);
+  }
+
+  40% {
+    mask: conic-gradient(transparent 0deg 144deg, black 144deg 360deg);
+  }
+
+  41.6% {
+    mask: conic-gradient(transparent 0deg 150deg, black 150deg 360deg);
+  }
+
+  43.3% {
+    mask: conic-gradient(transparent 0deg 156deg, black 156deg 360deg);
+  }
+
+  45% {
+    mask: conic-gradient(transparent 0deg 162deg, black 162deg 360deg);
+  }
+
+  46.6% {
+    mask: conic-gradient(transparent 0deg 168deg, black 168deg 360deg);
+  }
+
+  48.3% {
+    mask: conic-gradient(transparent 0deg 174deg, black 174deg 360deg);
+  }
+
+  50% {
+    mask: conic-gradient(transparent 0deg 180deg, black 180deg 360deg);
+  }
+
+  51.6% {
+    mask: conic-gradient(transparent 0deg 186deg, black 186deg 360deg);
+  }
+
+  53.3% {
+    mask: conic-gradient(transparent 0deg 192deg, black 192deg 360deg);
+  }
+
+  55% {
+    mask: conic-gradient(transparent 0deg 198deg, black 198deg 360deg);
+  }
+
+  56.6% {
+    mask: conic-gradient(transparent 0deg 204deg, black 204deg 360deg);
+  }
+
+  58.3% {
+    mask: conic-gradient(transparent 0deg 210deg, black 210deg 360deg);
+  }
+
+  60% {
+    mask: conic-gradient(transparent 0deg 216deg, black 216deg 360deg);
+  }
+
+  61.6% {
+    mask: conic-gradient(transparent 0deg 222deg, black 222deg 360deg);
+  }
+
+  63.3% {
+    mask: conic-gradient(transparent 0deg 228deg, black 228deg 360deg);
+  }
+
+  65% {
+    mask: conic-gradient(transparent 0deg 234deg, black 234deg 360deg);
+  }
+
+  66.6% {
+    mask: conic-gradient(transparent 0deg 240deg, black 240deg 360deg);
+  }
+
+  68.3% {
+    mask: conic-gradient(transparent 0deg 246deg, black 246deg 360deg);
+  }
+
+  70% {
+    mask: conic-gradient(transparent 0deg 252deg, black 252deg 360deg);
+  }
+
+  71.6% {
+    mask: conic-gradient(transparent 0deg 258deg, black 258deg 360deg);
+  }
+
+  73.3% {
+    mask: conic-gradient(transparent 0deg 264deg, black 264deg 360deg);
+  }
+
+  75% {
+    mask: conic-gradient(transparent 0deg 270deg, black 270deg 360deg);
+  }
+
+  76.6% {
+    mask: conic-gradient(transparent 0deg 276deg, black 276deg 360deg);
+  }
+
+  78.3% {
+    mask: conic-gradient(transparent 0deg 282deg, black 282deg 360deg);
+  }
+
+  80% {
+    mask: conic-gradient(transparent 0deg 288deg, black 288deg 360deg);
+  }
+
+  81.6% {
+    mask: conic-gradient(transparent 0deg 294deg, black 294deg 360deg);
+  }
+
+  83.3% {
+    mask: conic-gradient(transparent 0deg 300deg, black 300deg 360deg);
+  }
+
+  85% {
+    mask: conic-gradient(transparent 0deg 306deg, black 306deg 360deg);
+  }
+
+  86.6% {
+    mask: conic-gradient(transparent 0deg 312deg, black 312deg 360deg);
+  }
+
+  88.3% {
+    mask: conic-gradient(transparent 0deg 318deg, black 318deg 360deg);
+  }
+
+  90% {
+    mask: conic-gradient(transparent 0deg 324deg, black 324deg 360deg);
+  }
+
+  91.6% {
+    mask: conic-gradient(transparent 0deg 330deg, black 330deg 360deg);
+  }
+
+  93.3% {
+    mask: conic-gradient(transparent 0deg 336deg, black 336deg 360deg);
+  }
+
+  95% {
+    mask: conic-gradient(transparent 0deg 342deg, black 342deg 360deg);
+  }
+
+  96.6% {
+    mask: conic-gradient(transparent 0deg 348deg, black 348deg 360deg);
+  }
+
+  98.3% {
+    mask: conic-gradient(transparent 0deg 354deg, black 354deg 360deg);
+  }
+
+  100% {
+    mask: conic-gradient(transparent 0deg 360deg, black 360deg 360deg);
+  }
+}

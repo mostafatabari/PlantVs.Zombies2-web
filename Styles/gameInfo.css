@@ -1,0 +1,123 @@
+#buttonGameInfo {
+  background-image: url("../Images/gameStage/gameInfo/frame_02_delay-0.1s.png");
+  background-size: 100%;
+  animation: infoMove 2s infinite;
+}
+
+@keyframes infoMove {
+  0% {
+    background-image: url("../Images/gameStage/gameInfo/frame_02_delay-0.1s.png");
+  }
+
+  3% {
+    background-image: url("../Images/gameStage/gameInfo/frame_03_delay-0.1s.png");
+  }
+
+  7% {
+    background-image: url("../Images/gameStage/gameInfo/frame_04_delay-0.1s.png");
+  }
+
+  11% {
+    background-image: url("../Images/gameStage/gameInfo/frame_05_delay-0.1s.png");
+  }
+
+  14% {
+    background-image: url("../Images/gameStage/gameInfo/frame_06_delay-0.1s.png");
+  }
+
+  17% {
+    background-image: url("../Images/gameStage/gameInfo/frame_07_delay-0.1s.png");
+  }
+
+  21% {
+    background-image: url("../Images/gameStage/gameInfo/frame_08_delay-0.1s.png");
+  }
+
+  25% {
+    background-image: url("../Images/gameStage/gameInfo/frame_09_delay-0.1s.png");
+  }
+
+  28% {
+    background-image: url("../Images/gameStage/gameInfo/frame_10_delay-0.1s.png");
+  }
+
+  31% {
+    background-image: url("../Images/gameStage/gameInfo/frame_11_delay-0.1s.png");
+  }
+
+  35% {
+    background-image: url("../Images/gameStage/gameInfo/frame_12_delay-0.1s.png");
+  }
+
+  39% {
+    background-image: url("../Images/gameStage/gameInfo/frame_13_delay-0.1s.png");
+  }
+
+  42% {
+    background-image: url("../Images/gameStage/gameInfo/frame_14_delay-0.1s.png");
+  }
+
+  46% {
+    background-image: url("../Images/gameStage/gameInfo/frame_15_delay-0.1s.png");
+  }
+
+  50% {
+    background-image: url("../Images/gameStage/gameInfo/frame_16_delay-0.1s.png");
+  }
+
+  54% {
+    background-image: url("../Images/gameStage/gameInfo/frame_17_delay-0.1s.png");
+  }
+
+  57% {
+    background-image: url("../Images/gameStage/gameInfo/frame_18_delay-0.1s.png");
+  }
+
+  60% {
+    background-image: url("../Images/gameStage/gameInfo/frame_19_delay-0.1s.png");
+  }
+
+  64% {
+    background-image: url("../Images/gameStage/gameInfo/frame_20_delay-0.1s.png");
+  }
+
+  68% {
+    background-image: url("../Images/gameStage/gameInfo/frame_21_delay-0.1s.png");
+  }
+
+  71% {
+    background-image: url("../Images/gameStage/gameInfo/frame_22_delay-0.1s.png");
+  }
+
+  74% {
+    background-image: url("../Images/gameStage/gameInfo/frame_23_delay-0.1s.png");
+  }
+
+  78% {
+    background-image: url("../Images/gameStage/gameInfo/frame_24_delay-0.1s.png");
+  }
+
+  82% {
+    background-image: url("../Images/gameStage/gameInfo/frame_25_delay-0.1s.png");
+  }
+
+  85% {
+    background-image: url("../Images/gameStage/gameInfo/frame_26_delay-0.1s.png");
+  }
+
+  89% {
+    background-image: url("../Images/gameStage/gameInfo/frame_27_delay-0.1s.png");
+  }
+
+  93% {
+    background-image: url("../Images/gameStage/gameInfo/frame_28_delay-0.1s.png");
+  }
+
+  97% {
+    background-image: url("../Images/gameStage/gameInfo/frame_29_delay-0.1s.png");
+  }
+
+  100% {
+    background-image: url("../Images/gameStage/gameInfo/frame_30_delay-0.1s.png");
+  }
+}

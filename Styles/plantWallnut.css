@@ -1,0 +1,70 @@
+.plantWallNut {
+  background-image: url("../Images/plants/plantWallNut/01.png");
+  animation: wallNutIdle 8s infinite;
+}
+
+@keyframes wallNutIdle {
+  0% {
+    background-image: url("../Images/plants/plantWallNut/01.png");
+  }
+
+  30% {
+    background-image: url("../Images/plants/plantWallNut/02.png");
+  }
+
+  35% {
+    background-image: url("../Images/plants/plantWallNut/03.png");
+  }
+
+  36% {
+    background-image: url("../Images/plants/plantWallNut/04.png");
+  }
+
+  37% {
+    background-image: url("../Images/plants/plantWallNut/05.png");
+  }
+
+  45% {
+    background-image: url("../Images/plants/plantWallNut/06.png");
+  }
+
+  46% {
+    background-image: url("../Images/plants/plantWallNut/07.png");
+  }
+
+  47% {
+    background-image: url("../Images/plants/plantWallNut/08.png");
+  }
+
+  60% {
+    background-image: url("../Images/plants/plantWallNut/09.png");
+  }
+
+  75% {
+    background-image: url("../Images/plants/plantWallNut/10.png");
+  }
+
+  76% {
+    background-image: url("../Images/plants/plantWallNut/11.png");
+  }
+
+  77% {
+    background-image: url("../Images/plants/plantWallNut/12.png");
+  }
+
+  80% {
+    background-image: url("../Images/plants/plantWallNut/13.png");
+  }
+
+  81% {
+    background-image: url("../Images/plants/plantWallNut/14.png");
+  }
+
+  95% {
+    background-image: url("../Images/plants/plantWallNut/15.png");
+  }
+
+  100% {
+    background-image: url("../Images/plants/plantWallNut/16.png");
+  }
+}

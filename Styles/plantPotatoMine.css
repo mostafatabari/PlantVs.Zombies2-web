@@ -1,0 +1,66 @@
+.plantPotatoMine {
+  background-image: url("../Images/plants/plantPotatoMine/01.png");
+  animation: potatoMineIdle 2s infinite;
+}
+
+@keyframes potatoMineIdle {
+  0% {
+    background-image: url("../Images/plants/plantPotatoMine/01.png");
+  }
+
+  7% {
+    background-image: url("../Images/plants/plantPotatoMine/02.png");
+  }
+
+  14% {
+    background-image: url("../Images/plants/plantPotatoMine/03.png");
+  }
+
+  21% {
+    background-image: url("../Images/plants/plantPotatoMine/04.png");
+  }
+
+  29% {
+    background-image: url("../Images/plants/plantPotatoMine/05.png");
+  }
+
+  36% {
+    background-image: url("../Images/plants/plantPotatoMine/06.png");
+  }
+
+  43% {
+    background-image: url("../Images/plants/plantPotatoMine/07.png");
+  }
+
+  50% {
+    background-image: url("../Images/plants/plantPotatoMine/08.png");
+  }
+
+  47% {
+    background-image: url("../Images/plants/plantPotatoMine/09.png");
+  }
+
+  65% {
+    background-image: url("../Images/plants/plantPotatoMine/10.png");
+  }
+
+  72% {
+    background-image: url("../Images/plants/plantPotatoMine/11.png");
+  }
+
+  79% {
+    background-image: url("../Images/plants/plantPotatoMine/12.png");
+  }
+
+  86% {
+    background-image: url("../Images/plants/plantPotatoMine/13.png");
+  }
+
+  93% {
+    background-image: url("../Images/plants/plantPotatoMine/14.png");
+  }
+
+  100% {
+    background-image: url("../Images/plants/plantPotatoMine/15.png");
+  }
+}

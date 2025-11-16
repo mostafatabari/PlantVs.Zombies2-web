@@ -1,0 +1,91 @@
+.regularDefensive {
+  background-image: url("../Images/zombies/regularDefensive/01.png");
+  background-size: 110;
+  animation: regularDefensiveLaunch 4s infinite;
+}
+
+@keyframes regularDefensiveLaunch {
+  0% {
+    background-image: url("../Images/zombies/regularDefensive/01.png");
+  }
+
+  5% {
+    background-image: url("../Images/zombies/regularDefensive/02.png");
+  }
+
+  10% {
+    background-image: url("../Images/zombies/regularDefensive/03.png");
+  }
+
+  15% {
+    background-image: url("../Images/zombies/regularDefensive/04.png");
+  }
+
+  20% {
+    background-image: url("../Images/zombies/regularDefensive/05.png");
+  }
+
+  25% {
+    background-image: url("../Images/zombies/regularDefensive/06.png");
+  }
+
+  30% {
+    background-image: url("../Images/zombies/regularDefensive/07.png");
+  }
+
+  35% {
+    background-image: url("../Images/zombies/regularDefensive/08.png");
+  }
+
+  40% {
+    background-image: url("../Images/zombies/regularDefensive/09.png");
+  }
+
+  45% {
+    background-image: url("../Images/zombies/regularDefensive/10.png");
+  }
+
+  50% {
+    background-image: url("../Images/zombies/regularDefensive/11.png");
+  }
+
+  55% {
+    background-image: url("../Images/zombies/regularDefensive/12.png");
+  }
+
+  60% {
+    background-image: url("../Images/zombies/regularDefensive/13.png");
+  }
+
+  65% {
+    background-image: url("../Images/zombies/regularDefensive/14.png");
+  }
+
+  70% {
+    background-image: url("../Images/zombies/regularDefensive/15.png");
+  }
+
+  75% {
+    background-image: url("../Images/zombies/regularDefensive/16.png");
+  }
+
+  80% {
+    background-image: url("../Images/zombies/regularDefensive/17.png");
+  }
+
+  85% {
+    background-image: url("../Images/zombies/regularDefensive/18.png");
+  }
+
+  90% {
+    background-image: url("../Images/zombies/regularDefensive/19.png");
+  }
+
+  95% {
+    background-image: url("../Images/zombies/regularDefensive/20.png");
+  }
+
+  100% {
+    background-image: url("../Images/zombies/regularDefensive/21.png");
+  }
+}

@@ -1,0 +1,76 @@
+.peashooterDefensive {
+  background-image: url("../Images/plants/peashooterDefensive/01.png");
+  background-size: 100%;
+  left: 56%;
+  animation: peashooterDefensiveLaunch 2s infinite;
+}
+
+@keyframes peashooterDefensiveLaunch {
+  0% {
+    background-image: url("../Images/plants/peashooterDefensive/01.png");
+  }
+
+  6% {
+    background-image: url("../Images//plants/peashooterDefensive/02.png");
+  }
+
+  12% {
+    background-image: url("../Images//plants/peashooterDefensive/03.png");
+  }
+
+  19% {
+    background-image: url("../Images//plants/peashooterDefensive/04.png");
+  }
+
+  25% {
+    background-image: url("../Images//plants/peashooterDefensive/05.png");
+  }
+
+  31% {
+    background-image: url("../Images//plants/peashooterDefensive/06.png");
+  }
+
+  37% {
+    background-image: url("../Images//plants/peashooterDefensive/07.png");
+  }
+
+  44% {
+    background-image: url("../Images//plants/peashooterDefensive/08.png");
+  }
+
+  50% {
+    background-image: url("../Images//plants/peashooterDefensive/09.png");
+  }
+
+  56% {
+    background-image: url("../Images//plants/peashooterDefensive/10.png");
+  }
+
+  62% {
+    background-image: url("../Images//plants/peashooterDefensive/11.png");
+  }
+
+  69% {
+    background-image: url("../Images//plants/peashooterDefensive/12.png");
+  }
+
+  75% {
+    background-image: url("../Images//plants/peashooterDefensive/13.png");
+  }
+
+  81% {
+    background-image: url("../Images//plants/peashooterDefensive/14.png");
+  }
+
+  87% {
+    background-image: url("../Images//plants/peashooterDefensive/15.png");
+  }
+
+  93% {
+    background-image: url("../Images//plants/peashooterDefensive/16.png");
+  }
+
+  100% {
+    background-image: url("../Images//plants/peashooterDefensive/17.png");
+  }
+}

@@ -1,0 +1,79 @@
+.raDefensive {
+  background-image: url("../Images/zombies/raDefensive/01.png");
+  background-size: 110;
+  animation: raDefensiveLaunch 4s infinite;
+}
+
+@keyframes raDefensiveLaunch {
+  0% {
+    background-image: url("../Images/zombies/raDefensive/01.png");
+  }
+
+  6% {
+    background-image: url("../Images/zombies/raDefensive/02.png");
+  }
+
+  12% {
+    background-image: url("../Images/zombies/raDefensive/03.png");
+  }
+
+  17.5% {
+    background-image: url("../Images/zombies/raDefensive/04.png");
+  }
+
+  23.5% {
+    background-image: url("../Images/zombies/raDefensive/05.png");
+  }
+
+  29.5% {
+    background-image: url("../Images/zombies/raDefensive/06.png");
+  }
+
+  35% {
+    background-image: url("../Images/zombies/raDefensive/07.png");
+  }
+
+  41% {
+    background-image: url("../Images/zombies/raDefensive/08.png");
+  }
+
+  47% {
+    background-image: url("../Images/zombies/raDefensive/09.png");
+  }
+
+  53% {
+    background-image: url("../Images/zombies/raDefensive/10.png");
+  }
+
+  59% {
+    background-image: url("../Images/zombies/raDefensive/11.png");
+  }
+
+  65% {
+    background-image: url("../Images/zombies/raDefensive/12.png");
+  }
+
+  70.5% {
+    background-image: url("../Images/zombies/raDefensive/13.png");
+  }
+
+  76.5% {
+    background-image: url("../Images/zombies/raDefensive/14.png");
+  }
+
+  82.5% {
+    background-image: url("../Images/zombies/raDefensive/15.png");
+  }
+
+  88% {
+    background-image: url("../Images/zombies/raDefensive/16.png");
+  }
+
+  94% {
+    background-image: url("../Images/zombies/raDefensive/17.png");
+  }
+
+  100% {
+    background-image: url("../Images/zombies/raDefensive/18.png");
+  }
+}

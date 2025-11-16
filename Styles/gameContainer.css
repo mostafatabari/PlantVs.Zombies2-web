@@ -1,0 +1,1701 @@
+@font-face {
+  font-family: brianne;
+  src: url("../Fonts/briannetod.ttf");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100dvh;
+  background: #000;
+  font-family: brianne;
+  font-size: 1.5vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+body {
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+/* Layer visibility helpers */
+.layerVisible {
+  transition: opacity 2s ease;
+  display: block;
+  opacity: 1;
+}
+
+.hudVisible {
+  display: block;
+}
+
+.layerHidden {
+  transition: opacity 2s ease;
+  display: none;
+  opacity: 0;
+}
+
+.hudHidden {
+  display: none;
+}
+
+#rotateScreen {
+  width: 100%;
+  height: 100%;
+  background: url("../Images/gameStage/iconButton/rotate.png") no-repeat 50% 44%;
+  background-size: 3%;
+  z-index: 1000;
+}
+
+#rotateScreen > p {
+  width: 100%;
+  height: 100%;
+  padding-top: 1.6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: arial;
+  font-size: 2rem;
+  color: white;
+}
+
+/* Game Root Container */
+#rootGameContainer {
+  width: min(100vw, calc(var(--vh, 1vh) * 100 * 16 / 9));
+  height: auto;
+  aspect-ratio: 16/9;
+  padding-bottom: env(safe-area-inset-bottom);
+  cursor: url("../Images/gameStage/iconButton/cursor.png"), auto;
+  position: relative;
+}
+
+/* Game Intro Video */
+#videoGameIntro {
+  width: 100%;
+  height: 100%;
+}
+
+/* Home Gameplay Screen */
+#screenHomeGameplay {
+  width: 100%;
+  height: 100%;
+  background: url("../Images/gameStage/playBackground.png") no-repeat center;
+  background-size: 100% 100%;
+  opacity: 0;
+  position: relative;
+}
+
+/* Game Info */
+#buttonGameInfo:hover {
+  filter: brightness(0.7);
+}
+
+#buttonGameInfo {
+  width: 3.6%;
+  height: auto;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 10.4%;
+  left: 7.8%;
+}
+
+#gameInfo {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: brightness(0.7);
+  display: none;
+}
+
+#gameInfo > .gameInfoPanel {
+  transition: 0.3s ease;
+  width: 47.3%;
+  height: 70%;
+  border: 0.1rem solid rgba(0, 0, 0, 1);
+  border-radius: 2.5rem;
+  background: rgba(170, 110, 65, 1);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 1),
+    inset 0.12rem 0.12rem 1px 1px rgba(250, 190, 70, 0.5);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 50;
+}
+
+#gameInfo > .gameInfoPanel::before {
+  content: "";
+  width: 97%;
+  height: 97%;
+  border: 0.1rem solid rgba(0, 0, 0, 1);
+  border-radius: 2.2rem;
+  background: rgba(170, 110, 65, 1);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 1),
+    0.2rem 0.2rem 1px 1px rgba(250, 190, 70, 0.7);
+  transform: translate(-50%, 50%);
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+}
+
+#gameInfo > .gameInfoPanel > #buttonInfoClose:hover {
+  background-image: url("../Images/gameStage/iconButton/51.png");
+}
+
+#gameInfo > .gameInfoPanel > #buttonInfoClose {
+  width: auto;
+  height: 12%;
+  aspect-ratio: 1;
+  background: url("../Images/gameStage/iconButton/50.png") no-repeat center;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 4%;
+  right: 4.4%;
+  z-index: 20;
+}
+
+#gameInfo > .gameInfoPanel > .infoTitle {
+  width: 100%;
+  height: 18%;
+
+  font-size: 3.5rem;
+  color: rgba(250, 190, 70, 1);
+  text-align: center;
+  line-height: 9.5rem;
+  text-shadow: -0.1rem -0.1rem 0 rgba(0, 0, 0, 1),
+    0.1rem -0.1rem 0 rgba(0, 0, 0, 1), -0.1rem 0.1rem 0 rgba(0, 0, 0, 1),
+    0.1rem 0.1rem 0 rgba(0, 0, 0, 1);
+  position: relative;
+  z-index: 10;
+}
+
+#gameInfo > .gameInfoPanel > .infoContent {
+  width: 85%;
+  height: 67%;
+  padding: 1rem;
+  margin: 0 auto;
+  border: 0.1rem solid rgba(0, 0, 0, 1);
+  background: rgba(255, 245, 190, 0.8);
+
+  font-size: 2.5rem;
+  color: rgba(125, 65, 5, 1);
+  text-align: left;
+  line-height: 3rem;
+  text-shadow: none;
+  position: relative;
+  z-index: 10;
+}
+
+/* Exit Button */
+#buttonExit:hover {
+  background-image: url("../Images/gameStage/iconButton/2.png");
+}
+
+#buttonExit {
+  width: auto;
+  height: 9%;
+  aspect-ratio: 1;
+  background: url("../Images/gameStage/iconButton/1.png") no-repeat center;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 1%;
+  left: 5.8%;
+}
+
+/* Play Button */
+#buttonPlay:hover {
+  background-image: url("../Images/gameStage/iconButton/16.png");
+}
+
+#buttonPlay {
+  width: 12.8%;
+  height: 12.2%;
+  background: url("../Images/gameStage/iconButton/15.png") no-repeat center;
+  background-size: 100% 100%;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 5.4%;
+  left: 50%;
+}
+
+/* HUD Control Panel */
+.hudControlPanel {
+  width: 14.7%;
+  height: 9%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+  position: absolute;
+  bottom: 1%;
+  right: 5.6%;
+}
+
+.hudControlPanel > .hudControlItem {
+  /* background-color: #000; */
+  width: 33%;
+  height: 100%;
+  background: no-repeat center;
+  background-size: 100% 100%;
+}
+
+/* Level Test Button */
+#buttonPracticeStage:hover {
+  background-image: url("../Images/gameStage/iconButton/4.png");
+}
+
+#buttonPracticeStage {
+  background-image: url("../Images/gameStage/iconButton/3.png");
+}
+
+/* Updates Panel */
+#panelUpdates:hover {
+  background-image: url("../Images/gameStage/iconButton/6.png");
+}
+
+#panelUpdates {
+  background-image: url("../Images/gameStage/iconButton/5.png");
+}
+
+/* Settings Button */
+#configSettings:hover {
+  background-image: url("../Images/gameStage/iconButton/8.png");
+}
+
+#configSettings {
+  background-image: url("../Images/gameStage/iconButton/7.png");
+}
+
+/* Level Selection Screen */
+#screenLevelSelect {
+  width: 100%;
+  height: 100%;
+  background: url("../Images/gameStage/gameLevel/levelBackground.png") no-repeat
+    center;
+  background-size: 100% 100%;
+  opacity: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Parallax Wind Layer */
+#windParallaxLayer {
+  width: 200%;
+  height: 100%;
+  background: url("../Images/gameStage/gameLevel/wind.png") no-repeat center;
+  background-size: 100%;
+  mix-blend-mode: screen;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Rocks (foreground parallax objects) */
+#rockParallaxLayerNear,
+#rockParallaxLayerMid,
+#rockParallaxLayerFar {
+  width: 27%;
+  height: auto;
+  aspect-ratio: 1;
+  background: no-repeat center;
+  background-size: 100%;
+  position: absolute;
+}
+
+#rockParallaxLayerNear {
+  background-image: url("../Images/gameStage/gameLevel/rock1.png");
+  top: 9%;
+  left: 42%;
+}
+
+#rockParallaxLayerMid {
+  background-image: url("../Images/gameStage/gameLevel/rock2.png");
+  top: 30%;
+  left: 36%;
+}
+
+#rockParallaxLayerFar {
+  background-image: url("../Images/gameStage/gameLevel/rock3.png");
+  top: 13%;
+  left: 16%;
+}
+
+/* Top Buttons (Previous Layer, Settings, Story, Garden Stage) */
+#buttonPreviousLayer:hover {
+  background-image: url("../Images/gameStage/iconButton/10.png");
+}
+
+#buttonPreviousLayer,
+#buttonSettings,
+#buttonStory,
+#buttonGardenStage {
+  width: auto;
+  height: 9.5%;
+  aspect-ratio: 1;
+  border-radius: 15%;
+  background: url("../Images/gameStage/iconButton/9.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  top: 1%;
+  left: 5.8%;
+  z-index: 10;
+}
+
+/* Settings Button */
+#buttonSettings:hover {
+  background-image: url("../Images/gameStage/iconButton/8.png");
+}
+
+#buttonSettings {
+  background-image: url("../Images/gameStage/iconButton/7.png");
+  left: 11.9%;
+}
+
+/* Story Button */
+#buttonStory:hover {
+  background-image: url("../Images/gameStage/iconButton/12.png");
+}
+
+#buttonStory {
+  background-image: url("../Images/gameStage/iconButton/11.png");
+  left: 18%;
+}
+
+/* Garden Stage Button */
+#buttonGardenStage:hover {
+  background-image: url("../Images/gameStage/iconButton/14.png");
+}
+
+#buttonGardenStage {
+  background-image: url("../Images/gameStage/iconButton/13.png");
+  left: 24.1%;
+}
+
+/* HUD Resource Counters */
+#hudCoinCounter,
+#hudDiamondCounter {
+  width: 12.4%;
+  height: 5.6%;
+  border: 0.1rem solid rgba(200, 200, 200, 0.4);
+  border-radius: 1.5rem;
+  background: rgba(0, 0, 0, 0.9);
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  text-indent: 14%;
+  line-height: 3.5rem;
+  position: absolute;
+  bottom: 1.8%;
+  right: 28.1%;
+}
+
+#hudCoinCounter::before,
+#hudDiamondCounter::before {
+  content: "";
+  width: auto;
+  height: 157%;
+  aspect-ratio: 1;
+  background: url("../Images/gameStage/iconButton/40.png") no-repeat center;
+  background-size: 112%;
+  filter: drop-shadow(0.3rem 0.3rem 1px rgba(190, 0, 149, 0.4));
+  position: absolute;
+  bottom: -22%;
+  left: -22%;
+}
+
+#hudDiamondCounter {
+  width: 10.9%;
+  text-indent: 18%;
+  right: 14.3%;
+}
+
+#hudDiamondCounter::before {
+  background-image: url("../Images/gameStage/iconButton/41.png");
+  background-size: contain;
+}
+
+/* Shop Button */
+#buttonPlantUpgrade:hover {
+  background-image: url("../Images/gameStage/iconButton/18.png");
+}
+
+#buttonPlantUpgrade {
+  width: auto;
+  height: 13%;
+  aspect-ratio: 1.1;
+  border-radius: 15%;
+  background: url("../Images/gameStage/iconButton/17.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  top: -1.1%;
+  right: 5%;
+  z-index: 10;
+}
+
+/* Map Level Scroll Buttons */
+#buttonScrollLeft,
+#buttonScrollRight {
+  width: auto;
+  height: 8.3%;
+  aspect-ratio: 1;
+  border-radius: 15%;
+  background: url("../Images/gameStage/iconButton/19.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  bottom: 0.1%;
+  left: 4.9%;
+  z-index: 10;
+}
+
+#buttonScrollRight {
+  background-image: url("../Images/gameStage/iconButton/20.png");
+  left: 90.5%;
+}
+
+/* Map Levels Track */
+#levelPathStrip {
+  width: 235%;
+  height: 100%;
+  background: url("../Images/gameStage/gameLevel/levels.png") 0 50% no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nodeLevelActive {
+  width: auto;
+  height: 4.5%;
+  aspect-ratio: 1.6;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.nodeLevelActive > .badgeLevelNumber {
+  width: 40%;
+  height: 120%;
+  background: url("../Images/gameStage/gameLevel/levelNumber.png") no-repeat;
+  background-size: 290%;
+  position: absolute;
+  z-index: 10;
+}
+
+.levelPassed::before {
+  content: "";
+  width: 750%;
+  height: 750%;
+  background: url("../Images/gameStage/gameLevel/lightLevel0.png") no-repeat
+    center;
+  background-size: contain;
+  transform: translate(-42.3%, 12%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+/* Highlight Effect Around Level */
+.effectLevelHighlight::before {
+  content: "";
+  width: 750%;
+  height: 750%;
+  background: url("../Images/gameStage/gameLevel/lightLevel1.png") no-repeat
+    center;
+  background-size: contain;
+  transform: translate(-42.3%, 12%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.effectLevelHighlight::after {
+  content: "";
+  width: 750%;
+  height: 750%;
+  background: url("../Images/gameStage/gameLevel/lightLevel2.png") no-repeat
+    center;
+  background-size: contain;
+  transform: translate(-42.3%, 12%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.75;
+  transform-origin: bottom center;
+  pointer-events: none;
+  animation: levelLightPulse 0.35s infinite alternate linear;
+}
+
+@keyframes levelLightPulse {
+  100% {
+    transform: translate(-42.3%, 12%) scale(0.95);
+  }
+}
+
+/* Battle Arena Screen */
+#screenBattleArena {
+  transition: opacity 2s;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ground Layer Animation */
+#battleArenaBackground {
+  width: auto;
+  height: 100%;
+  aspect-ratio: 2.56;
+  background: url("../Images/gameStage/gameGround.png") no-repeat center;
+  background-size: contain;
+  transform: translateX(-14%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: groundSlideIntro 3s forwards ease-in-out;
+}
+
+@keyframes groundSlideIntro {
+  0% {
+    transform: translateX(0);
+  }
+
+  60% {
+    transform: translateX(-30.5%);
+  }
+
+  70% {
+    transform: translateX(-30.5%);
+  }
+
+  100% {
+    transform: translateX(-14%);
+  }
+}
+
+#battleArenaBackground.ready {
+  animation: groundSlideStart 1.5s forwards ease-in-out;
+}
+
+@keyframes groundSlideStart {
+  0% {
+    transform: translateX(-14%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* HUD Power Buttons */
+#hudTopControlsPanel {
+  width: 100%;
+  height: 100%;
+}
+
+#buttonSunPower:hover,
+#buttonLeafPower:hover {
+  background-image: url("../Images/gameStage/iconButton/22.png");
+}
+
+#buttonSunPower,
+#buttonLeafPower {
+  width: auto;
+  height: 9.8%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: url("../Images/gameStage/iconButton/21.png") no-repeat center;
+  background-size: contain;
+  transform: translateY(-110%);
+  position: absolute;
+  top: 1.7%;
+  left: 5.2%;
+  animation: sunFloatIn 0.3s forwards;
+}
+
+@keyframes sunFloatIn {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#buttonLeafPower {
+  transform: translateY(-240%);
+  top: 13.7%;
+  animation: leafFloatIn 0.3s forwards;
+}
+
+@keyframes leafFloatIn {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* HUD Power Counters */
+#hudSunCounter,
+#hudLeafCounter {
+  width: 11.5%;
+  height: 7.5%;
+  border-radius: 1.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 4.3rem;
+  color: #fff;
+  text-align: center;
+  text-indent: 30%;
+  line-height: 4.8rem;
+  transform: translateY(-170%);
+  position: absolute;
+  top: 3%;
+  left: 13.3%;
+  animation: sunCounterReveal 0.3s forwards;
+}
+
+@keyframes sunCounterReveal {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#hudSunCounter::before,
+#hudLeafCounter::before {
+  content: "";
+  width: auto;
+  height: 160%;
+  aspect-ratio: 1;
+  background: url("../Images/gameStage/iconButton/38.png") no-repeat center;
+  background-size: contain;
+  filter: drop-shadow(0rem 0.3rem 1px rgba(0, 0, 0, 0.8));
+  position: absolute;
+  bottom: -25%;
+  left: -20%;
+}
+
+#hudLeafCounter {
+  height: 6.3%;
+  transform: translateY(-390%);
+  top: 16%;
+  left: 12.5%;
+  animation: leafCounterReveal 0.3s forwards;
+}
+
+@keyframes leafCounterReveal {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#hudLeafCounter::before {
+  height: 195%;
+  aspect-ratio: 2;
+  background-image: url("../Images/gameStage/iconButton/39.png");
+  filter: none;
+  bottom: -40%;
+  left: -13.5%;
+}
+
+/* HUD Currency Counters */
+#hudCoinCounter,
+#hudDiamondCounter {
+  width: 12.2%;
+  height: 5.6%;
+  border-radius: 1.5rem;
+  background: rgba(0, 0, 0, 0.9);
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  text-indent: 16%;
+  line-height: 3.5rem;
+  transform: translateY(590%);
+  position: absolute;
+  bottom: 25.8%;
+  left: 9.5%;
+  animation: currencyCounterReveal 0.3s forwards;
+}
+
+@keyframes currencyCounterReveal {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#hudCoinCounter::before,
+#hudDiamondCounter::before {
+  content: "";
+  width: auto;
+  height: 155%;
+  aspect-ratio: 1;
+  background: url("../Images/gameStage/iconButton/40.png") no-repeat center;
+  background-size: 112%;
+  filter: drop-shadow(0.3rem 0.3rem 1px rgba(190, 0, 149, 0.4));
+  position: absolute;
+  bottom: -20%;
+  left: -20%;
+}
+
+#hudCoinCounter.exit,
+#hudDiamondCounter.exit {
+  bottom: -8%;
+  transition: bottom 1s ease;
+}
+
+#hudDiamondCounter {
+  width: 10.7%;
+  text-indent: 22%;
+  transform: translateY(590%);
+  bottom: 16.5%;
+  left: 9%;
+}
+
+#hudDiamondCounter::before {
+  background-image: url("../Images/gameStage/iconButton/41.png");
+  background-size: contain;
+}
+
+/* Panel Plants Collection */
+#panelPlantCollection {
+  transition: 0.3s ease;
+  width: 47.3%;
+  height: 75%;
+  border: 0.1rem solid rgba(0, 0, 0, 1);
+  border-radius: 2.5rem;
+  background: rgba(170, 110, 65, 1);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 1),
+    inset 0.12rem 0.12rem 1px 1px rgba(250, 190, 70, 0.5);
+  transform: translate(-59%, 0%);
+  position: absolute;
+  bottom: -100%;
+  left: 50%;
+  animation: collectionSlideUp 0.3s forwards;
+}
+
+@keyframes collectionSlideUp {
+  100% {
+    transform: translate(-59%, 0);
+  }
+}
+
+#panelPlantCollection::before {
+  content: "";
+  width: 97%;
+  height: 97%;
+  border: 0.1rem solid rgba(0, 0, 0, 1);
+  border-radius: 2rem;
+  background: rgba(70, 50, 30, 1);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 1),
+    0.2rem 0.2rem 1px 1px rgba(250, 190, 70, 0.7);
+  transform: translate(-50%, 50%);
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+}
+
+#panelPlantCollection.ready {
+  bottom: 1.2%;
+}
+
+/* Panel Collection Header */
+#panelPlantCollection > .header {
+  width: 97%;
+  height: 45%;
+  border-radius: 2.5rem;
+  background: rgba(170, 110, 65, 1);
+  box-shadow: 0 0.3rem 1px 1px rgba(100, 65, 45, 0.8);
+  position: absolute;
+  top: 1.5%;
+  left: 1.5%;
+}
+
+#panelPlantCollection > .header > .container {
+  width: 98.8%;
+  height: 90%;
+  border: 0.1rem solid #000;
+  border-radius: 1.3rem;
+  background: rgba(255, 245, 190, 1);
+  box-shadow: 0.2rem 0.4rem 1px 1px rgba(100, 65, 45, 0.8),
+    inset 0.15rem 0.15rem 1px 1px rgba(255, 255, 255, 0.7);
+  font-size: 4rem;
+  color: #fff;
+  text-align: center;
+  line-height: 5.5rem;
+  text-shadow: 0.15rem 0.15rem 1px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: absolute;
+  bottom: 4%;
+  left: 0.3%;
+  overflow: hidden;
+}
+
+#panelPlantCollection > .header > .container::before {
+  content: "";
+  width: 100%;
+  height: 32%;
+  border-radius: 1.3rem 1.3rem 0 0;
+  background: rgba(110, 175, 0, 1);
+  box-shadow: inset 0.15rem 0.15rem 1px 1px rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#panelPlantCollection > .header > .container > #plantTitle {
+  width: 100%;
+  height: 32%;
+  position: relative;
+}
+
+#panelPlantCollection > .header > .container > .plantFrame {
+  width: 42%;
+  height: 68%;
+  background: url("../Images/gameStage/selectPlayer/playerBackground.png")
+    no-repeat center;
+  background-size: contain;
+}
+
+#panelPlantCollection > .header > .container > .plantFrame > #plantCharacter {
+  width: 100%;
+  height: 100%;
+  background: 50% 90% no-repeat;
+  background-size: 45%;
+}
+
+#panelPlantCollection > .header > .container > #plantContent {
+  width: 58%;
+  height: 68%;
+  font-size: 3rem;
+  color: rgba(125, 65, 5, 1);
+  text-align: left;
+  text-indent: 1%;
+  line-height: 3.5rem;
+  text-shadow: none;
+}
+
+/* plant Select Grid */
+#panelPlantCollection > #plantSelectGrid {
+  width: 97%;
+  height: 51%;
+  border-radius: 0 0 2.5rem 2.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: absolute;
+  bottom: 1.5%;
+  left: 1.5%;
+  overflow: hidden;
+}
+
+#panelPlantCollection > #plantSelectGrid > .slotPlantCard {
+  width: 20%;
+  height: 25%;
+  background: no-repeat center;
+  background-size: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Panel Selected Plants */
+#panelPlantDeck,
+#panelPlantDeckClone {
+  width: 36.6%;
+  height: 10.7%;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  transform: translate(-48%, -100%);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  z-index: 20;
+}
+
+#panelPlantDeck {
+  animation: plantDeckPopIn 0.3s forwards;
+}
+
+@keyframes plantDeckPopIn {
+  0% {
+    transform: translate(-48%, 550%) scale(0);
+  }
+
+  100% {
+    transform: translate(-48%, 0) scale(1);
+  }
+}
+
+#panelPlantDeckClone {
+  transform: translate(-48%, 0);
+  pointer-events: none;
+}
+
+#panelPlantDeck > .slotSelectedPlant,
+#panelPlantDeckClone > .slotSelectedPlant {
+  width: 25%;
+  height: 100%;
+  background: url("../Images/gameStage/selectPlayer/playerTransparent.png")
+    no-repeat center;
+  background-size: contain;
+  flex-shrink: 0;
+  position: relative;
+  opacity: 0.5;
+}
+
+#panelPlantDeckClone > .slotSelectedPlant {
+  background: url("../Images/gameStage/selectPlayer/01.png") no-repeat center;
+  background-size: contain;
+}
+
+/* Plant Preview */
+.plantPreview {
+  width: 7.1%;
+  height: auto;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: no-repeat center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.slotPlantCard:hover:after,
+.slotSelectedPlant:hover:after {
+  content: "";
+  width: 82%;
+  height: 81%;
+  border: 0.5rem solid rgba(245, 210, 110, 1);
+  border-radius: 0.5rem;
+  box-shadow: inset 0.1rem 0.1rem 1px 1px rgba(205, 165, 55, 1),
+    inset -0.1rem -0.1rem 1px 1px rgba(205, 165, 55, 1);
+  transform: translate(-45%, -45%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  mask: linear-gradient(black, black) 0% 0% /35% 35% no-repeat,
+    linear-gradient(black, black) 100% 0% /35% 35% no-repeat,
+    linear-gradient(black, black) 100% 100% /35% 35% no-repeat,
+    linear-gradient(black, black) 0% 100% /35% 35% no-repeat;
+}
+
+/* Utility Buttons */
+#buttonFillDeck:hover {
+  background-image: url("../Images/gameStage/iconButton/24.png");
+}
+
+#buttonFillDeck,
+#buttonClearDeck,
+#buttonPauseGame,
+#buttonViewArena,
+#buttonSpeedUpBattle {
+  width: auto;
+  height: 10.3%;
+  aspect-ratio: 1;
+  border-radius: 15%;
+  background: url("../Images/gameStage/iconButton/23.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  top: 1%;
+  right: 18.1%;
+}
+
+#buttonClearDeck:hover {
+  background-image: url("../Images/gameStage/iconButton/26.png");
+}
+
+#buttonClearDeck {
+  background-image: url("../Images/gameStage/iconButton/25.png");
+  top: 12%;
+  right: 18.1%;
+}
+
+#buttonPauseGame:hover {
+  background-image: url("../Images/gameStage/iconButton/28.png");
+}
+
+#buttonPauseGame {
+  height: 11.9%;
+  background-image: url("../Images/gameStage/iconButton/27.png");
+  top: 0.9%;
+  right: 4.7%;
+}
+
+#buttonViewArena:hover {
+  background-image: url("../Images/gameStage/iconButton/30.png");
+}
+
+#buttonViewArena {
+  height: 11.9%;
+  background-image: url("../Images/gameStage/iconButton/29.png");
+  top: 12.3%;
+  right: 4.7%;
+}
+
+/* Rock Button */
+#buttonRock:hover {
+  background-image: url("../Images/gameStage/iconButton/32.png");
+}
+
+#buttonRock {
+  width: auto;
+  height: 9.15%;
+  aspect-ratio: 2.75;
+  border-radius: 15%;
+  background: url("../Images/gameStage/iconButton/31.png") no-repeat center;
+  background-size: contain;
+  transform: translateY(110%);
+  position: absolute;
+  bottom: 1.6%;
+  right: 5.5%;
+  animation: rockButtonReveal 0.3s forwards;
+}
+
+@keyframes rockButtonReveal {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#buttonRock.ready:hover {
+  background-image: url("../Images/gameStage/iconButton/34.png");
+}
+
+#buttonRock.ready {
+  background-image: url("../Images/gameStage/iconButton/33.png");
+}
+
+/* Gameplay Stage */
+#stageGameplayArena {
+  width: 100%;
+  height: 100%;
+}
+
+#buttonSpeedUpBattle:hover {
+  background-image: url("../Images/gameStage/iconButton/45.png");
+}
+
+#buttonSpeedUpBattle {
+  height: 11.9%;
+  background-image: url("../Images/gameStage/iconButton/44.png");
+  top: 0.9%;
+  right: 11.1%;
+}
+
+#hudBottomPanel {
+  height: 100%;
+  width: 100%;
+  transform: translateY(13%);
+  transition: transform 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#hudBottomPanel.enter {
+  transform: translateY(0%);
+}
+
+.hudZombieCounter {
+  width: 20.5%;
+  height: 1.6%;
+  position: absolute;
+  bottom: 5%;
+  right: 11%;
+}
+
+.hudZombieCounter > .glassPanel {
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3.5%;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(white, white) content-box,
+    linear-gradient(white, white);
+  -webkit-mask-composite: destination-out;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-origin: border-box;
+  -webkit-mask-clip: content-box, border-box;
+  mask-composite: exclude;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hudZombieCounter > .borderBox {
+  width: 98.6%;
+  height: 90%;
+  border: 2px solid black;
+  background: transparent;
+  position: absolute;
+  top: 70%;
+  left: 3.5%;
+  overflow: hidden;
+}
+
+#progressIndicator {
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(205, 255, 130, 1) 0%,
+    rgba(40, 215, 50, 1) 100%
+  );
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  transition: transform 0.3s ease;
+}
+
+#startPoint {
+  height: 100%;
+  width: 100%;
+  transform: translateX(100%);
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+#startPoint::before {
+  content: "";
+  height: auto;
+  width: 15%;
+  aspect-ratio: 1;
+  background: url("../Images/gameStage/iconButton/53.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  top: -50%;
+  left: 0%;
+}
+
+#endPoint {
+  height: auto;
+  width: 12%;
+  aspect-ratio: 1;
+  background: url("../Images/gameStage/iconButton/52.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  top: -11%;
+  left: 3%;
+  transition: transform 0.3s ease;
+}
+
+#hudDayTracker {
+  font-weight: 500;
+  font-size: 3.3rem;
+  justify-content: center;
+  color: rgba(255, 250, 180, 1);
+  text-shadow: 0.3rem 0.1rem 0 black, -0.1rem 0.1rem 0 black,
+    0.1rem 0.3rem 0 black, 0.1rem -0.1rem 0 black, 0.3rem 0.3rem 0 black,
+    -0.1rem 0.3rem 0 black, 0.3rem -0.1rem 0 black, -0.1rem -0.1rem 0 black;
+  position: absolute;
+  bottom: 2%;
+  right: 33%;
+  pointer-events: none;
+}
+
+#hudAbilityPanel {
+  width: 35.5%;
+  height: 13%;
+  border-radius: 15%;
+  background: url("../Images/gameStage/iconButton/37.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  bottom: -1.3%;
+  left: 5%;
+  pointer-events: none;
+}
+
+/* Plant Grid Lane Board */
+#gridPlantLaneBoard {
+  width: 56.8%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  pointer-events: none;
+  position: absolute;
+  top: 24%;
+  left: 33.4%;
+}
+
+/* Plant Individual Grid Cell */
+.gridCellLaneSlot {
+  aspect-ratio: 1/1.2;
+  pointer-events: auto;
+  position: relative;
+  border: 1p solid #fff;
+}
+
+/* grid cell in selected state */
+.gridCellSelected::before,
+.gridCellSelected::after {
+  content: "";
+  width: 65%;
+  height: auto;
+  aspect-ratio: 1;
+  border: 0.5rem solid rgba(172, 255, 47, 0.7);
+  border-radius: 20%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  mask: linear-gradient(black, black) 0% 0% /35% 35% no-repeat,
+    linear-gradient(black, black) 100% 0% /35% 35% no-repeat,
+    linear-gradient(black, black) 100% 100% /35% 35% no-repeat,
+    linear-gradient(black, black) 0% 100% /35% 35% no-repeat;
+  animation: cellSelectionGlow 1s infinite;
+}
+
+@keyframes cellSelectionGlow {
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.gridCellSelected::after {
+  animation: cellSelectionFade 1s infinite;
+}
+
+@keyframes cellSelectionFade {
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.gridCellSelected.ready::before,
+.gridCellSelected.ready::after {
+  content: "";
+  border: 0.5rem solid rgba(170, 0, 0, 0.7);
+}
+
+#lawnMowerContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.lawnMowerUnit {
+  width: 11.5%;
+  height: auto;
+  aspect-ratio: 1;
+  background: url("../Images/gameStage/selectPlayer/lawnMower.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 20.5%;
+  top: 22%;
+  opacity: 0;
+  animation: fadeInLawnMower 0.1s 1 linear forwards;
+}
+
+@keyframes fadeInLawnMower {
+  100% {
+    opacity: 1;
+  }
+}
+
+.lawnMowerDustEffect {
+  width: 8%;
+  height: auto;
+  aspect-ratio: 1;
+  background: url("../Images/gameStage/selectPlayer/dust.png");
+  background-size: contain;
+  mix-blend-mode: screen;
+  position: absolute;
+  left: 24%;
+  top: 23.5%;
+  opacity: 0;
+  animation: lawnMowerDustAnim 0.5s linear forwards;
+}
+
+@keyframes lawnMowerDustAnim {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.lawnMowerUnit.laneTwo {
+  animation-delay: 0.1s;
+  top: 35%;
+}
+
+.lawnMowerDustEffect.laneTow {
+  animation-delay: 0.1s;
+  top: 36.5%;
+}
+
+.lawnMowerUnit.laneThree {
+  animation-delay: 0.2s;
+  top: 48.5%;
+}
+
+.lawnMowerDustEffect.laneThree {
+  animation-delay: 0.2s;
+  top: 50%;
+}
+
+.lawnMowerUnit.laneFour {
+  animation-delay: 0.3s;
+  top: 61.5%;
+}
+
+.lawnMowerDustEffect.laneFour {
+  animation-delay: 0.3s;
+  top: 63%;
+}
+
+.lawnMowerUnit.laneFive {
+  animation-delay: 0.4s;
+  top: 75%;
+}
+
+.lawnMowerDustEffect.laneFive {
+  animation-delay: 0.4s;
+  top: 76.5%;
+}
+
+.lawnMowerUnit.active {
+  background-image: url("../Images/gameStage/selectPlayer/lawnMowerDefensive.png");
+  animation: lawnMowerRun 3s 1 ease-in forwards;
+}
+
+.lawnMowerUnit.active::after {
+  content: "";
+  width: 80%;
+  height: 25%;
+  transform: translate(-50%, -70%) skewX(-20deg);
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  z-index: 10;
+  pointer-events: none;
+  filter: blur(4px);
+}
+
+@keyframes lawnMowerRun {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    left: 110%;
+  }
+}
+
+/* Zombies Entity Sprite */
+.zombieEntitySprite {
+  width: 13.5%;
+  height: auto;
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  position: absolute;
+  left: 110%;
+  background: 50% 100% no-repeat;
+  background-size: 80%;
+  pointer-events: none;
+  z-index: 40;
+  top: 16%;
+}
+
+.zombieEntitySprite::after {
+  content: "";
+  width: 50%;
+  height: 25%;
+  border-radius: 50%;
+  transform: translate(-50%);
+  position: absolute;
+  bottom: -5%;
+  left: 55%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    transparent 70%
+  );
+}
+
+.zombieEntitySprite.splatter::before {
+  content: "";
+  width: 80%;
+  height: auto;
+  aspect-ratio: 1;
+  transform-origin: right center;
+  position: absolute;
+  bottom: 5%;
+  left: -18%;
+  background: url("../Images/plants/peaProjectile/splatter.png") no-repeat
+    center;
+  background-size: contain;
+  animation: bloodSplatter 0.1s linear;
+}
+
+@keyframes bloodSplatter {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Plant Entity Sprite */
+.plantEntitySprite {
+  width: 128%;
+  height: auto;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 31%;
+  left: 50%;
+  background: 50% 100% no-repeat;
+  background-size: 85%;
+}
+
+.plantEntitySprite::after {
+  content: "";
+  width: 75%;
+  height: 30%;
+  border-radius: 50%;
+  transform: translate(-50%);
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  z-index: 50;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    transparent 70%
+  );
+}
+
+/* Peashooter peaProjectile */
+.peaProjectile {
+  width: 38%;
+  height: auto;
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 25%;
+  left: 70%;
+  background: url(../Images/plants/peaProjectile/peaProjectile.png) no-repeat
+    center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 60;
+  animation: peaProjectileTravel 1.5s linear forwards;
+}
+
+@keyframes peaProjectileTravel {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  0.1% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(2000%);
+  }
+}
+
+.peaProjectile::after {
+  content: "";
+  width: 100%;
+  height: 50%;
+  border-radius: 50%;
+  transform: translate(-50%);
+  position: absolute;
+  bottom: -90%;
+  left: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    transparent 70%
+  );
+}
+
+/* Zombie Exit Areas */
+#laneExitZone {
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.sunPoint {
+  transition: top 4s linear, left 4s linear, opacity 2s linear;
+  width: 7%;
+  height: auto;
+  aspect-ratio: 1;
+  position: absolute;
+  top: -15%;
+  background: url(../Images/gameStage/iconButton/35.png) no-repeat center;
+  background-size: contain;
+  z-index: 900;
+  animation: sunRotationAnim 4s linear infinite;
+}
+
+@keyframes sunRotationAnim {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sunPointCollected {
+  transition: top 1s linear, left 1s linear;
+  animation: sunSpinCollected 4s 1 linear, sunScaleFadeOut 1s 1s 1 linear;
+}
+
+@keyframes sunSpinCollected {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sunScaleFadeOut {
+  25% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+#resultGame {
+  transition: opacity 2s;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+#resultGame.win {
+  background: #fff;
+  display: block;
+}
+
+#resultGame.lose {
+  background: url("../Images/gameStage/gameLevel/lose.png") no-repeat center;
+  background-size: contain;
+  display: block;
+}
+
+#messageText {
+  transition: opacity 2s;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 500;
+  justify-content: center;
+  color: red;
+  text-shadow: 0.4rem 0 0 black, -0.4rem 0 0 black, 0 0.4rem 0 black,
+    0 -0.4rem 0 black, 0.2rem 0.2rem 0 black, -0.2rem 0.2rem 0 black,
+    0.2rem -0.2rem 0 black, -0.2rem -0.2rem 0 black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+#messageText.marsh {
+  transition: 0.5s;
+  display: flex;
+  animation: textShow 3s 1 forwards;
+}
+
+@keyframes textShow {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  20% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}
+
+#buttonToMap:hover {
+  background-image: url("../Images/gameStage/iconButton/47.png");
+}
+
+#buttonToMap,
+#buttonRestart {
+  width: auto;
+  height: 10%;
+  aspect-ratio: 2.7;
+  border-radius: 15%;
+  background: url("../Images/gameStage/iconButton/46.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  bottom: 5.6%;
+  left: 29.2%;
+  pointer-events: auto;
+}
+
+#buttonRestart:hover {
+  background-image: url("../Images/gameStage/iconButton/49.png");
+}
+
+#buttonRestart {
+  left: 55.5%;
+  background-image: url("../Images/gameStage/iconButton/48.png");
+}

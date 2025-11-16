@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+
+    <!-- SEO -->
+    <title>Plants vs Zombies 2 - Web Edition</title>
+    <meta name="description"
+        content="Play Plants vs. Zombies 2 Web Edition! A fun fan-made version using HTML, CSS Grid, and JavaScript animations." />
+    <meta name="keywords" content="Plants vs Zombies, PvZ, HTML Game, JavaScript Game, Browser Game, Mostafa Tabari" />
+    <meta name="author" content="Mostafa Tabari" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="" />
+
+    <!-- Social / Open Graph -->
+    <meta property="og:title" content="Plants vs Zombies 2 - Web Edition" />
+    <meta property="og:description"
+        content="A web-based recreation of the classic Plants vs. Zombies game, built with HTML, CSS Grid, and JavaScript DOM animations." />
+    <meta property="og:image" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet" />
+
+    <!-- PWA / Theme -->
+    <meta name="theme-color" content="#000" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Link -->
+    <link href="Styles/gameContainer.css" rel="stylesheet">
+    <link href="Styles/gameInfo.css" rel="stylesheet">
+    <link href="Styles/revealSector.css" rel="stylesheet">
+    <link href="Styles/plantSunflower.css" rel="stylesheet">
+    <link href="Styles/plantWallnut.css" rel="stylesheet">
+    <link href="Styles/plantPotatoMine.css" rel="stylesheet">
+
+    <link href="Styles/plantPeashooter.css" rel="stylesheet">
+    <link href="Styles/peashooterDefensive.css" rel="stylesheet">
+
+    <link href="Styles/regularIdle.css" rel="stylesheet">
+    <link href="Styles/zombieRegular.css" rel="stylesheet">
+    <link href="Styles/regularDefensive.css" rel="stylesheet">
+
+    <link href="Styles/coneHeadIdle.css" rel="stylesheet">
+    <link href="Styles/zombieConehead.css" rel="stylesheet">
+    <link href="Styles/coneHeadDefensive.css" rel="stylesheet">
+
+    <link href="Styles/raIdle.css" rel="stylesheet">
+    <link href="Styles/zombieRa.css" rel="stylesheet">
+    <link href="Styles/raDefensive.css" rel="stylesheet">
+
+    <script src="Scripts/levelsDragTranslate.js"></script>
+    <script src="Scripts/configuration.js"></script>
+    <script src="Scripts/level.js"></script>
+    <script src="Scripts/stage.js"></script>
+
+</head>
+
+<body>
+    <div id="rootGameContainer">
+
+        <!-- Screen Rotate -->
+        <div id="rotateScreen" class="layerVisible">
+            <p>Please rotate your device and then tap the screen</p>
+        </div>
+
+        <!-- Intro Video -->
+        <video id="videoGameIntro" src="Videos/vidIntroGame.mp4" class="layerHidden"></video>
+
+        <!-- Home Gameplay Screen -->
+        <div id="screenHomeGameplay" class="layerHidden">
+            <div id="buttonExit"></div>
+            <div id="buttonPlay"></div>
+            <div class="hudControlPanel">
+                <div id="buttonPracticeStage" class="hudControlItem"></div>
+                <div id="panelUpdates" class="hudControlItem"></div>
+                <div id="configSettings" class="hudControlItem"></div>
+            </div>
+            <div id="buttonGameInfo"></div>
+            <div id="gameInfo">
+                <div class="gameInfoPanel">
+                    <div id="buttonInfoClose"></div>
+                    <div class="infoTitle">GAME INFO</div>
+                    <div class="infoContent">
+                        Presented by: Mostafa Tabari
+                        <br />
+                        www.linkedin.com/in/mostafa-tabari
+                        <br />
+                        www.github.com/mostafatabari
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Level Selection Screen -->
+        <div id="screenLevelSelect" class="layerHidden">
+            <div id="windParallaxLayer"></div>
+            <div id="rockParallaxLayerNear"></div>
+            <div id="rockParallaxLayerMid"></div>
+            <div id="rockParallaxLayerFar"></div>
+            <div id="buttonPreviousLayer"></div>
+            <div id="buttonSettings"></div>
+            <div id="buttonStory"></div>
+            <div id="buttonGardenStage"></div>
+            <div id="badgeCoinCount">60</div>
+            <div id="badgeDiamondCount">0</div>
+            <div id="buttonPlantUpgrade"></div>
+            <div id="buttonScrollLeft"></div>
+            <div id="buttonScrollRight"></div>
+            <div id="levelPathStrip"></div>
+        </div>
+
+        <!-- Gameplay Arena -->
+        <div id="screenBattleArena" class="layerHidden">
+            <div id="battleArenaBackground"></div>
+
+            <!-- HUD top controls -->
+            <div id="hudTopControlsPanel" class="hudHidden">
+                <div id="buttonSunPower"></div>
+                <div id="hudSunCounter">50</div>
+                <div id="buttonLeafPower"></div>
+                <div id="hudLeafCounter"></div>
+                <div id="hudCoinCounter">60</div>
+                <div id="hudDiamondCounter">0</div>
+            </div>
+
+            <!--  Panel Plants Collection -->
+            <div id="panelPlantCollection">
+                <div class="header">
+                    <div class="container">
+                        <div id="plantTitle">sunflower</div>
+                        <div class="plantFrame">
+                            <div id="plantCharacter" class="plantSunflower"></div>
+                        </div>
+                        <div id="plantContent">Gives you additional sun</div>
+                    </div>
+                </div>
+                <div id="plantSelectGrid"></div>
+            </div>
+
+            <!-- Tray Selected Plants -->
+            <div id="panelPlantDeck">
+                <div class="slotSelectedPlant"></div>
+                <div class="slotSelectedPlant"></div>
+                <div class="slotSelectedPlant"></div>
+                <div class="slotSelectedPlant"></div>
+            </div>
+
+            <!-- Tray Selected Plants Clone -->
+            <div id="panelPlantDeckClone">
+                <div class="slotSelectedPlant"></div>
+                <div class="slotSelectedPlant"></div>
+                <div class="slotSelectedPlant"></div>
+                <div class="slotSelectedPlant"></div>
+            </div>
+
+            <!-- Utility Buttons -->
+            <div id="buttonPauseGame"></div>
+            <div id="hudControlsPanel" class="hudHidden">
+                <div id="buttonFillDeck"></div>
+                <div id="buttonClearDeck"></div>
+                <div id="buttonViewArena"></div>
+                <div id="buttonRock"></div>
+            </div>
+
+            <!-- Gameplay Stage -->
+            <div id="stageGameplayArena" class="hudHidden">
+                <div id="buttonSpeedUpBattle"></div>
+                <div id="hudBottomPanel">
+                    <div class="hudZombieCounter">
+                        <div class="glassPanel"></div>
+                        <div class="borderBox">
+                            <div id="progressIndicator"></div>
+                        </div>
+                        <div id="startPoint"></div>
+                        <div id="endPoint"></div>
+                    </div>
+                    <div id="hudDayTracker">Ancient Egypt - Day <span id="levelNumber">1</span></div>
+                    <div id="hudAbilityPanel"></div>
+                </div>
+                <div id="gridPlantLaneBoard"></div>
+                <div id="lawnMowerContainer">
+                    <div class="lawnMowerUnit laneOne" data-lane="1" data-active="false"></div>
+                    <div class="lawnMowerDustEffect laneOne"></div>
+                    <div class="lawnMowerUnit laneTwo" data-lane="2" data-active="false"></div>
+                    <div class="lawnMowerDustEffect laneTwo"></div>
+                    <div class="lawnMowerUnit laneThree" data-lane="3" data-active="false"></div>
+                    <div class="lawnMowerDustEffect laneThree"></div>
+                    <div class="lawnMowerUnit laneFour" data-lane="4" data-active="false"></div>
+                    <div class="lawnMowerDustEffect laneFour"></div>
+                    <div class="lawnMowerUnit laneFive" data-lane="5" data-active="false"></div>
+                    <div class="lawnMowerDustEffect laneFive"></div>
+                </div>
+                <div id="laneExitZone"></div>
+            </div>
+        </div>
+        <div id="resultGame">
+            <div id="messageText"></div>
+            <div id="buttonToMap" class="hudHidden"></div>
+            <div id="buttonRestart" class="hudHidden"></div>
+        </div>
+    </div>
+
+    <script>
+
+        /* Window Event Listeners */
+        ["load", "resize", "orientationchange", "deviceorientation"].forEach((evt) => {
+            window.addEventListener(evt, () => {
+                setDynamicHeight();
+                setLandscape();
+            });
+        });
+
+        setDynamicHeight();
+        setLandscape();
+        window.addEventListener("touchmove", e => {
+            if (e.scale !== undefined && e.scale !== 1) e.preventDefault();
+        }, { passive: false });
+
+        window.addEventListener("gesturestart", e => e.preventDefault());
+        window.addEventListener("gesturechange", e => e.preventDefault());
+        window.addEventListener("resize", setDynamicHeight);
+
+        const startButton = document.getElementById("rotateScreen");
+        startButton.addEventListener("click", async () => {
+            await enterFullscreen();
+
+            if (screen.orientation?.lock) {
+                try { await screen.orientation.lock('landscape'); } catch (e) { }
+            }
+
+            startButton.style.display = "none";
+        });
+
+
+        /* Game State Variables */
+        let levelHighlightIndex = 0,
+            selectedPlantCount = 0,
+            maxSelectablePlants = 4,
+            isPlantDeckEnabled = false,
+            isClickDeckAllowed = false,
+            isPlantCellPlaced = false,
+            activePlantSprite = null,
+            activeTargetDeck = null,
+            screenReadyDurationMs = 2000,
+            entryZombieDurationMs = 6000,
+            decSelectionLock = [],
+            decAllow = false,
+            isGameActive = false,
+            speedDuration = false;
+
+        /* Rotate Screen Handler */
+        rotateScreen.addEventListener("click", () => {
+            switchLevelVisibility(rotateScreen, videoGameIntro);
+            videoGameIntro.play();
+        });
+
+        /* Initialize Level & Player Progress & Update Level Number */
+        updateCurrentLevelData();
+        loadProgressOnStart();
+        updateLevelNumberDisplay();
+
+        /* Intro Video Ended */
+        videoGameIntro.addEventListener("ended", () =>
+            switchLevelVisibility(videoGameIntro, screenHomeGameplay)
+        );
+
+        /* Game Info Buttons */
+        buttonGameInfo.addEventListener("click", () => (gameInfo.style.display = "block"));
+        buttonInfoClose.addEventListener("click", () => (gameInfo.style.display = "none"));
+
+        /* Gameplay -> Level Select */
+        buttonPlay.addEventListener("click", () =>
+            switchLevelVisibility(screenHomeGameplay, screenLevelSelect)
+        );
+
+        /* Create Level Nodes */
+        levelsConfig.forEach((levelEntity, index) => {
+            const levelNode = createElement("div", "nodeLevelActive", levelPathStrip);
+            levelNode.style.top = `${levelEntity.topPositionPercent}%`;
+            levelNode.style.left = `${levelEntity.leftPositionPercent}%`;
+
+            const levelNumberBadge = createElement("div", "badgeLevelNumber", levelNode);
+            levelNumberBadge.style.backgroundPosition = `${levelEntity.backgroundPositionPercent}%`;
+            levelNumberBadge.style.bottom = `${levelEntity.backgroundBottomPercent}%`;
+            levelNumberBadge.style.left = `${levelEntity.backgroundLeftPercent}%`;
+
+            index === levelHighlightIndex && levelNode.classList.add("effectLevelHighlight");
+            levelNode.addEventListener("click", () => selectLevel(levelEntity));
+        });
+
+        /* Initialize Plant Cards */
+        currentLevelPlants.forEach((plantEntity, plantIndex) => {
+            const plantCard = createElement("div", "slotPlantCard", plantSelectGrid);
+            plantCard.style.backgroundImage = `url('Images/gameStage/selectPlayer/${plantEntity.plantSpriteName}.png')`;
+            plantCard.addEventListener("click", () => selectPlantForDeck(plantEntity, plantIndex, plantCard));
+        });
+
+        /* Plant Deck Click Handling */
+        panelPlantDeck.addEventListener("click", (event) => {
+            const targetElement = event.target.closest("[data-index]");
+            if (!targetElement) return;
+
+            const datasetIndex = parseInt(targetElement.dataset.index, 10);
+            if (isNaN(datasetIndex)) return;
+
+            isPlantDeckEnabled
+                ? handleSelectPlantFromDeck(targetElement, datasetIndex)
+                : handleRemovePlantFromDeck(targetElement, datasetIndex);
+        });
+
+        /* Create Plant Grid */
+        [...Array(45)].forEach((_, i) => {
+            const columns = 9;
+            const gridCell = createElement("div", "gridCellLaneSlot", gridPlantLaneBoard);
+            gridCell.dataset.lane = Math.ceil((i + 1) / columns);
+        });
+
+        /* To Map Button */
+        buttonToMap.addEventListener("click", () => {
+            gameEnded = false;
+            activeZombies.forEach((z) => {
+                if (z.hitInterval) clearInterval(z.hitInterval);
+                if (z.element && z.element.remove) z.element.remove();
+            });
+            activeZombies = [];
+
+            stageGameplayArena.className = "hudHidden";
+            battleArenaBackground.classList.remove("ready");
+
+            resultGame.style.opacity = "0";
+            resultGame.className = "";
+            buttonToMap.className = "hudHidden";
+            buttonRestart.className = "hudHidden";
+            screenBattleArena.style.opacity = "0";
+
+            setTimeout(() => switchLevelVisibility(screenBattleArena, screenLevelSelect), 1000);
+        });
+
+        /* Restart Button */
+        buttonRestart.addEventListener("click", () => {
+            gameEnded = false;
+            activeZombies.forEach((z) => {
+                if (z.hitInterval) clearInterval(z.hitInterval);
+                if (z.element && z.element.remove) z.element.remove();
+            });
+            activeZombies = [];
+
+            stageGameplayArena.className = "hudHidden";
+            battleArenaBackground.classList.remove("ready");
+
+            requestAnimationFrame(() => {
+                resultGame.style.opacity = "0";
+                resultGame.className = "";
+                buttonToMap.className = "hudHidden";
+                buttonRestart.className = "hudHidden";
+                screenBattleArena.style.opacity = "0";
+
+                setTimeout(() => goToRestart(screenLevelSelect, screenBattleArena), 1500);
+            });
+        });
+
+        /* Disable Context Menu & F12 */
+        document.addEventListener("contextmenu", (e) => e.preventDefault());
+        document.addEventListener("keydown", (e) => {
+            if (
+                e.key === "F12" ||
+                (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i")
+            ) {
+                e.preventDefault();
+            }
+        });
+
+        /* Drag Instances */
+        const dragInstances = [
+            { content: windParallaxLayer, sensitivity: 1.0, factor: 0.84 },
+            { content: rockParallaxLayerNear, sensitivity: 5, factor: 4.05 },
+            { content: rockParallaxLayerMid, sensitivity: 9, factor: 4.3 },
+            { content: rockParallaxLayerFar, sensitivity: 7, factor: 4.15 },
+            { content: levelPathStrip, sensitivity: 2.0, factor: 1.0 },
+        ];
+
+        dragInstances.forEach(({ content, sensitivity, factor }) => {
+            initDragTranslate({
+                container: screenLevelSelect,
+                content,
+                sensitivity,
+                friction: 0.95,
+                bounds: {
+                    min: () =>
+                        ((screenLevelSelect.getBoundingClientRect().width -
+                            content.getBoundingClientRect().width * factor) /
+                            content.getBoundingClientRect().width) *
+                        factor *
+                        100,
+                    max: 0,
+                },
+            });
+        });
+
+    </script>
+</body>
+
+</html>
